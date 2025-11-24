@@ -40,7 +40,7 @@ export default function About() {
 							</h2>
 							<p>
 								Beyond just identification, we provide rich context about each
-								breed's history. Our interactive map feature highlights the
+								breed&apos;s history. Our interactive map feature highlights the
 								country of origin for every breed, helping you understand the
 								geographical heritage of your furry friend.
 							</p>

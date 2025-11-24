@@ -12,7 +12,7 @@ const allBreeds = Object.values(labels).map((label: string) => {
   const parts = label.split('-');
   if (parts.length < 2) return { name: label, id: label, country: 'Unknown' };
   
-  let name = parts.slice(1).join('-').replace(/_/g, ' ')
+  const name = parts.slice(1).join('-').replace(/_/g, ' ')
     .split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');

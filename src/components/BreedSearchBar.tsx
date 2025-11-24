@@ -39,42 +39,46 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
   const suggestionsRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
+  const [isVoiceSupported, setIsVoiceSupported] = useState(false);
 
-  // Typewriter effect for placeholder
+  // Typewriter effect for placeholder (uses local counters to avoid stale state deps)
   useEffect(() => {
     const examples = ['Golden Retriever', 'Poodle', 'German Shepherd', 'Husky', 'Beagle', 'or upload an image...'];
     let currentExampleIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const type = () => {
       const currentExample = examples[currentExampleIndex];
-      
+
       if (isDeleting) {
-        setPlaceholder(prev => prev.slice(0, -1));
-        if (placeholder.length === 0) {
+        currentCharIndex = Math.max(0, currentCharIndex - 1);
+        setPlaceholder(currentExample.slice(0, currentCharIndex));
+
+        if (currentCharIndex === 0) {
           isDeleting = false;
           currentExampleIndex = (currentExampleIndex + 1) % examples.length;
           timeoutId = setTimeout(type, 500);
           return;
         }
       } else {
-        setPlaceholder(currentExample.slice(0, currentCharIndex + 1));
-        currentCharIndex++;
+        currentCharIndex = Math.min(currentExample.length, currentCharIndex + 1);
+        setPlaceholder(currentExample.slice(0, currentCharIndex));
+
         if (currentCharIndex === currentExample.length) {
           isDeleting = true;
           timeoutId = setTimeout(type, 2000); // Pause before deleting
           return;
         }
       }
-      
+
       timeoutId = setTimeout(type, isDeleting ? 50 : 100);
     };
 
     timeoutId = setTimeout(type, 100);
     return () => clearTimeout(timeoutId);
-  }, []); 
+  }, []);
 
   // Handle outside click to close suggestions
   useEffect(() => {
@@ -87,6 +91,15 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Detect Chrome's webkitSpeechRecognition availability on the client
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'webkitSpeechRecognition' in window) {
+      setIsVoiceSupported(true);
+    } else {
+      setIsVoiceSupported(false);
+    }
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -169,6 +182,7 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
         }
       };
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       recognition.onerror = (event: any) => {
         setIsListening(false);
         if (event.error === 'network') {
@@ -256,24 +270,26 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
             </svg>
           </button>
 
-          {/* Voice Icon */}
-          <button 
-            onClick={toggleListening}
-            className={`h-12 w-12 md:h-14 md:w-14 flex items-center justify-center rounded-full transition-all duration-300 ${
-              isListening 
-                ? 'bg-red-500 text-white shadow-lg shadow-red-500/40 scale-110 animate-pulse' 
-                : 'text-slate-400 hover:text-indigo-600 hover:bg-indigo-50'
-            }`}
-            title={isListening ? "Stop listening" : "Search by voice"}
-          >
-            {isListening ? (
-               <div className="w-4 h-4 bg-white rounded-sm"></div>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-              </svg>
-            )}
-          </button>
+          {/* Voice Icon (only in Chrome where webkitSpeechRecognition exists) */}
+          {isVoiceSupported && (
+            <button 
+              onClick={toggleListening}
+              className={`h-12 w-12 md:h-14 md:w-14 flex items-center justify-center rounded-full transition-all duration-300 ${
+                isListening 
+                  ? 'bg-red-500 text-white shadow-lg shadow-red-500/40 scale-110 animate-pulse' 
+                  : 'text-slate-400 hover:text-indigo-600 hover:bg-indigo-50'
+              }`}
+              title={isListening ? "Stop listening" : "Search by voice"}
+            >
+              {isListening ? (
+                 <div className="w-4 h-4 bg-white rounded-sm"></div>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+              )}
+            </button>
+          )}
         </div>
       </div>
 

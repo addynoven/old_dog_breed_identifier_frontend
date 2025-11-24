@@ -67,9 +67,9 @@ export default function MainContent({
             <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/50 backdrop-blur-md border border-white/40 text-slate-600 text-sm font-medium shadow-sm">
               ✨ AI-Powered Dog Breed Identifier
             </div>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 mb-6 tracking-tight leading-tight">
+              <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 mb-6 tracking-tight leading-tight">
               Discover Your <br/>
-              <span className="text-indigo-600">Dog's Breed</span>
+              <span className="text-indigo-600">Dog&apos;s Breed</span>
             </h1>
             <p className="text-slate-600 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-light">
               Upload a photo or search to instantly identify breeds and learn about their origins.

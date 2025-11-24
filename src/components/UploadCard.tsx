@@ -13,7 +13,7 @@ interface UploadCardProps {
   selectedBreedImage?: string | null;
 }
 
-export default function UploadCard({ setSelectedFile, onFileChange, imagePreview, handlePredict, isLoading, uploadProgress, error, selectedBreedImage }: UploadCardProps) {
+export default function UploadCard({ onFileChange, imagePreview, handlePredict, isLoading, uploadProgress, error, selectedBreedImage }: UploadCardProps) {
   
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
