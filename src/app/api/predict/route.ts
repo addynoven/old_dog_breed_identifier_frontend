@@ -1,4 +1,6 @@
+
 import { NextRequest, NextResponse } from 'next/server';
+import { getApiUrl } from '../../../utils/api';
 import { getBreedNameFromLabel } from '../../../lib/breed-utils';
 import { closureCache } from '../../../lib/closure-cache';
 
@@ -54,7 +56,11 @@ export async function POST(request: NextRequest) {
     const bucketName = process.env.TEBI_BUCKET_NAME;
     const imageUrl = `https://s3.tebi.io/${bucketName}/${fileHash}`;
 
-    const backendResponse = await fetch('http://localhost:8000/predict', {
+    const backendUrl = `${getApiUrl()}/predict`;
+    console.log('🔗 Calling backend URL:', backendUrl);
+    console.log('📦 With image URL:', imageUrl);
+
+    const backendResponse = await fetch(backendUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ image_url: imageUrl })
@@ -101,7 +107,8 @@ export async function POST(request: NextRequest) {
       breed_info: breedInfo
     });
 
-  } catch {
+  } catch (error) {
+    console.error('❌ Prediction error:', error);
     return NextResponse.json(
       { error: 'Prediction failed' },
       { status: 500 }
