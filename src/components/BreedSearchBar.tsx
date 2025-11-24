@@ -25,6 +25,10 @@ interface Breed {
   id: string;
 }
 
+import ImageSearchModal from './CameraModal';
+
+// ... (existing imports)
+
 export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading }: BreedSearchBarProps) {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<Breed[]>([]);
@@ -33,6 +37,7 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
   const [placeholder, setPlaceholder] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [voiceError, setVoiceError] = useState<string | null>(null);
+  const [showImageSearch, setShowImageSearch] = useState(false);
   
   const inputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -96,7 +101,12 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
   // Detect Chrome's webkitSpeechRecognition availability on the client
   useEffect(() => {
     if (typeof window !== 'undefined' && 'webkitSpeechRecognition' in window) {
-      setIsVoiceSupported(true);
+      const { userAgent } = window.navigator;
+      // Edge includes "Edg" and "Chrome", so we must exclude it
+      const isEdge = userAgent.includes('Edg');
+      const isChrome = userAgent.includes('Chrome');
+      
+      setIsVoiceSupported(isChrome && !isEdge);
     } else {
       setIsVoiceSupported(false);
     }
@@ -258,11 +268,11 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
         />
 
         <div className="absolute right-3 flex items-center gap-2">
-          {/* Camera Button */}
+          {/* Image Search Button (Unified) */}
           <button
-            onClick={() => fileInputRef.current?.click()}
+            onClick={() => setShowImageSearch(true)}
             className="h-12 w-12 md:h-14 md:w-14 flex items-center justify-center rounded-full text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300"
-            title="Upload image"
+            title="Search by image"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
@@ -325,6 +335,16 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
           {voiceError}
         </div>
       )}
+
+      <ImageSearchModal 
+        isOpen={showImageSearch}
+        onClose={() => setShowImageSearch(false)}
+        onCapture={(file) => {
+          if (onImageSelect) {
+            onImageSelect(file);
+          }
+        }}
+      />
     </div>
   );
 }
