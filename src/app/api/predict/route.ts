@@ -4,10 +4,23 @@ import { getApiUrl } from '../../../utils/api';
 import { getBreedNameFromLabel } from '../../../lib/breed-utils';
 import { closureCache } from '../../../lib/closure-cache';
 
+// Helper to get the base URL for internal API calls
+function getBaseUrl() {
+  // In Vercel, use VERCEL_URL
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  // In production with custom domain
+  if (process.env.NEXTAUTH_URL) {
+    return process.env.NEXTAUTH_URL;
+  }
+  // Local development
+  return 'http://localhost:3000';
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { fileHash } = await request.json();
-    console.log("hello world", fileHash);
     // Check closure cache first
     if (closureCache.has(fileHash)) {
       console.log('🎯 Closure cache HIT for:', fileHash);
@@ -22,7 +35,7 @@ export async function POST(request: NextRequest) {
     console.log('❌ Closure cache MISS, trying Redis/Valkey for:', fileHash);
 
     // Check Redis cache
-    const cacheResponse = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/valkey/get-record`, {
+    const cacheResponse = await fetch(`${getBaseUrl()}/api/valkey/get-record`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ shortId: fileHash })
@@ -39,7 +52,7 @@ export async function POST(request: NextRequest) {
         };
         
         // Get breed info and cache in closure
-        const breedInfoResponse = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/breed-info`, {
+        const breedInfoResponse = await fetch(`${getBaseUrl()}/api/breed-info`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ breedName })
@@ -79,7 +92,7 @@ export async function POST(request: NextRequest) {
     const breedName = getBreedNameFromLabel(labelNumber);
 
     // Get breed info
-    const breedInfoResponse = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/breed-info`, {
+    const breedInfoResponse = await fetch(`${getBaseUrl()}/api/breed-info`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ breedName })
@@ -88,7 +101,7 @@ export async function POST(request: NextRequest) {
     const breedInfo = breedInfoResponse.ok ? (await breedInfoResponse.json()).breedInfo : '';
 
     // Cache in both Valkey and closure
-    await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/valkey/set-record`, {
+    await fetch(`${getBaseUrl()}/api/valkey/set-record`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ shortId: fileHash, data: labelNumber })
