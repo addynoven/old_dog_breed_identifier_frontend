@@ -7,7 +7,8 @@ import { closureCache } from '../../../lib/closure-cache';
 export async function POST(request: NextRequest) {
   try {
     const { fileHash } = await request.json();
-
+    console.log("hello world");
+    
     // Check closure cache first
     if (closureCache.has(fileHash)) {
       console.log('🎯 Closure cache HIT for:', fileHash);
