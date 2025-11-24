@@ -13,8 +13,8 @@ export default function ConfigPage() {
     const stored = sessionStorage.getItem('custom_api_url');
     if (stored) {
       setCustomUrl(stored);
+      setCurrentUrl(stored);
     }
-    setCurrentUrl(getApiUrl());
   }, []);
 
   const handleSave = () => {
@@ -30,21 +30,17 @@ export default function ConfigPage() {
       return;
     }
 
-    sessionStorage.setItem('custom_api_url', customUrl);
-    setCurrentUrl(customUrl);
-    setMessage('✅ Custom URL saved! It will persist until you close the tab.');
-    
-    // Force a reload or just let the user know
-    // We don't necessarily need to reload if getApiUrl checks sessionStorage every time
-  };
+    // Remove trailing slash if present
+    const sanitizedUrl = customUrl.endsWith('/') ? customUrl.slice(0, -1) : customUrl;
 
-  const handleClear = () => {
-    sessionStorage.removeItem('custom_api_url');
-    setCustomUrl('');
-    // We can't easily get the original env var here without reloading or importing it directly
-    // But getApiUrl will return the env var if storage is empty
-    // Let's just reload the page to be clean or re-fetch getApiUrl
-    window.location.reload();
+    sessionStorage.setItem('custom_api_url', sanitizedUrl);
+    setCurrentUrl(sanitizedUrl);
+    setMessage('✅ Custom URL saved! You can now use the app.');
+    
+    // Redirect to home after saving
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 1000);
   };
 
   return (
@@ -54,12 +50,30 @@ export default function ConfigPage() {
         
         <div className="mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700">
           <p className="text-sm text-gray-400 mb-1">Current Active API URL:</p>
-          <code className="text-green-400 break-all">{currentUrl}</code>
+          <code className="text-green-400 break-all">{currentUrl || 'Not Configured'}</code>
+        </div>
+
+        <div className="mb-6 p-4 bg-blue-900/30 rounded-lg border border-blue-700/50">
+          <h3 className="text-sm font-semibold text-blue-300 mb-2">How to get the URL?</h3>
+          <p className="text-xs text-gray-300 mb-3">
+            Run the backend in Google Colab, copy the generated URL (e.g., ngrok), and paste it below.
+          </p>
+          <a 
+            href="https://colab.research.google.com/drive/1nPuuJX6MJeH-ZT3PXq8GmIjTQW_pGiPy?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded transition-colors"
+          >
+            <span>🚀 Open Google Colab</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
 
         <div className="mb-6">
           <label className="block text-sm font-medium text-gray-300 mb-2">
-            Set Custom API URL (Session Only)
+            Set Backend API URL (Required)
           </label>
           <input
             type="text"
@@ -81,13 +95,7 @@ export default function ConfigPage() {
             onClick={handleSave}
             className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
           >
-            Save
-          </button>
-          <button
-            onClick={handleClear}
-            className="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-          >
-            Reset to Default
+            Save & Continue
           </button>
         </div>
 

@@ -67,6 +67,15 @@ function HomeContent() {
     }
   }, [searchParams]);
 
+  // Check for API URL configuration
+  useEffect(() => {
+    try {
+      getApiUrl();
+    } catch (e) {
+      window.location.href = '/config';
+    }
+  }, []);
+
   const handlePredict = async () => {
     if (!selectedFile) {
       // If we already have a prediction (e.g. from search), just ignore the click
