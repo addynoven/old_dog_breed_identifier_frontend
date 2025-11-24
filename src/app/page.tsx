@@ -9,6 +9,7 @@ import labels from '../../public/labels.json';
 import { calculateFileHash, requestUploadUrl, uploadToTebi } from '../lib/upload';
 import { getBreedInfo } from '../lib/breed-utils';
 import { usePredictionStore } from '../lib/prediction-store';
+import { getApiUrl } from '../utils/api';
 
 function HomeContent() {
   const [prediction, setPrediction] = useState('');
@@ -115,7 +116,10 @@ function HomeContent() {
       
       const response = await fetch('/api/predict', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'x-backend-url': getApiUrl() // Pass the current effective URL (custom or env) to the server
+        },
         body: JSON.stringify({ fileHash })
       });
 

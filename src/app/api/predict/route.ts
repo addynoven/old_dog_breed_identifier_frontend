@@ -69,7 +69,8 @@ export async function POST(request: NextRequest) {
     const bucketName = process.env.TEBI_BUCKET_NAME;
     const imageUrl = `https://s3.tebi.io/${bucketName}/${fileHash}`;
 
-    const backendUrl = `${getApiUrl()}/predict`;
+    const customBackendUrl = request.headers.get('x-backend-url');
+    const backendUrl = `${customBackendUrl || getApiUrl()}/predict`;
     console.log('🔗 Calling backend URL:', backendUrl);
     console.log('📦 With image URL:', imageUrl);
 
