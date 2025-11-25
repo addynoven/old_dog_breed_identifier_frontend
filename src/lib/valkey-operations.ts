@@ -126,7 +126,7 @@ export async function deleteFileRecord(shortId: string): Promise<void> {
   }
 }
 
-export async function setCache(key: string, data: any, ttlSeconds?: number): Promise<void> {
+export async function setCache(key: string, data: unknown, ttlSeconds?: number): Promise<void> {
   const client = await createValkeyClient();
   
   try {
@@ -149,7 +149,7 @@ export async function setCache(key: string, data: any, ttlSeconds?: number): Pro
   }
 }
 
-export async function getCache(key: string): Promise<any | null> {
+export async function getCache(key: string): Promise<unknown | null> {
   const client = await createValkeyClient();
   
   try {

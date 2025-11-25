@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 
 interface ImageSearchModalProps {
@@ -16,30 +16,10 @@ export default function ImageSearchModal({ isOpen, onClose, onCapture }: ImageSe
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [stream, setStream] = useState<MediaStream | null>(null);
+  const streamRef = useRef<MediaStream | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isDragOver, setIsDragOver] = useState(false);
-
-  // Reset view when modal opens
-  useEffect(() => {
-    if (isOpen) {
-      setView('selection');
-      setError(null);
-    } else {
-      stopCamera();
-    }
-  }, [isOpen]);
-
-  // Handle camera stream when view changes
-  useEffect(() => {
-    if (view === 'camera' && isOpen) {
-      startCamera();
-    } else {
-      stopCamera();
-    }
-    return () => stopCamera();
-  }, [view, isOpen]);
 
   const startCamera = async () => {
     setIsLoading(true);
@@ -48,7 +28,7 @@ export default function ImageSearchModal({ isOpen, onClose, onCapture }: ImageSe
       const mediaStream = await navigator.mediaDevices.getUserMedia({ 
         video: { facingMode: 'environment' } 
       });
-      setStream(mediaStream);
+      streamRef.current = mediaStream;
       if (videoRef.current) {
         videoRef.current.srcObject = mediaStream;
       }
@@ -60,12 +40,33 @@ export default function ImageSearchModal({ isOpen, onClose, onCapture }: ImageSe
     }
   };
 
-  const stopCamera = () => {
-    if (stream) {
-      stream.getTracks().forEach(track => track.stop());
-      setStream(null);
+  const stopCamera = useCallback(() => {
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach(track => track.stop());
+      streamRef.current = null;
     }
-  };
+  }, []);
+
+  // Reset view when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      setView('selection');
+      setError(null);
+    } else {
+      stopCamera();
+    }
+  }, [isOpen, stopCamera]);
+
+  // Handle camera stream when view changes
+  useEffect(() => {
+    if (view === 'camera' && isOpen) {
+      startCamera();
+    } else {
+      stopCamera();
+    }
+    return () => stopCamera();
+  }, [view, isOpen, stopCamera]);
+
 
   const handleCapture = () => {
     if (videoRef.current && canvasRef.current) {

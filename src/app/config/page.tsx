@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getApiUrl } from '@/utils/api';
 
 export default function ConfigPage() {
   const [currentUrl, setCurrentUrl] = useState('');
@@ -25,7 +24,7 @@ export default function ConfigPage() {
     // Basic validation
     try {
       new URL(customUrl);
-    } catch (e) {
+    } catch {
       setMessage('Invalid URL format');
       return;
     }

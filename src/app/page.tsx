@@ -71,7 +71,7 @@ function HomeContent() {
   useEffect(() => {
     try {
       getApiUrl();
-    } catch (e) {
+    } catch {
       window.location.href = '/config';
     }
   }, []);
