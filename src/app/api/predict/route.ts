@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
 
     // Cache in both Valkey and closure
     // Store just the label number to match what we expect in getCache
-    await setCache(`file:${fileHash}`, labelNumber, 86400); // 24 hours TTL
+    await setCache(`file:${fileHash}`, labelNumber); // Permanent cache
 
     const prediction = { 
       label_number: labelNumber,
