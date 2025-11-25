@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #f8fafc;
   --foreground: #1e293b;
@@ -19,10 +21,17 @@
   }
 }
 
+/* Manual dark mode override */
+:root.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .glass-effect {
@@ -31,11 +40,20 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.dark .glass-effect {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .gradient-text {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
 }
 
 @keyframes fadeIn {

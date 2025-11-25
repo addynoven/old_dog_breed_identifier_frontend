@@ -64,8 +64,10 @@ export default function BreedMap({ breedName }: BreedMapProps) {
     if (!breedName) return;
 
     // Normalize breed name logic (same as before)
+    // Normalize breed name logic
     let searchName = breedName;
-    if (breedName.includes('-')) {
+    // Only attempt to parse as label if it looks like a label (nXXXXXXX-Name)
+    if (breedName.match(/^n\d+-/)) {
         const parts = breedName.split('-');
         if (parts.length >= 2) {
              searchName = parts.slice(1).join('-').replace(/_/g, ' ');
@@ -149,42 +151,42 @@ export default function BreedMap({ breedName }: BreedMapProps) {
   };
 
   return (
-    <div className="group w-full bg-white/90 backdrop-blur-xl rounded-[2rem] shadow-2xl overflow-hidden border border-white/50 transition-all duration-500 hover:shadow-indigo-500/20 hover:border-indigo-200/50 flex flex-col">
+    <div className="group w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl rounded-[2rem] shadow-2xl overflow-hidden border border-white/50 dark:border-slate-700/50 transition-all duration-500 hover:shadow-indigo-500/20 hover:border-indigo-200/50 dark:hover:border-indigo-500/30 flex flex-col">
       {/* Premium Header Section */}
-      <div className="relative p-8 border-b border-slate-100/50 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30">
+      <div className="relative p-8 border-b border-slate-100/50 dark:border-slate-700/50 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30 dark:from-slate-900 dark:via-indigo-900/20 dark:to-purple-900/20">
         <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
           <span className="text-8xl">🌍</span>
         </div>
         
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-3">
-            <div className="p-2 bg-indigo-100/50 rounded-xl text-2xl animate-bounce-slow">
+            <div className="p-2 bg-indigo-100/50 dark:bg-indigo-900/50 rounded-xl text-2xl animate-bounce-slow">
               📍
             </div>
-            <h3 className="text-sm font-bold text-indigo-900/60 uppercase tracking-widest">
+            <h3 className="text-sm font-bold text-indigo-900/60 dark:text-indigo-300/60 uppercase tracking-widest">
               Geographic Origin
             </h3>
           </div>
           
           {location ? (
             <div className="flex flex-col">
-              <p className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-900 via-purple-800 to-indigo-900 tracking-tight">
+              <p className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-900 via-purple-800 to-indigo-900 dark:from-indigo-300 dark:via-purple-300 dark:to-indigo-300 tracking-tight">
                 {location.origin}
               </p>
-              <p className="text-slate-500 font-medium mt-2 flex items-center gap-2">
+              <p className="text-slate-500 dark:text-slate-400 font-medium mt-2 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 Native Region
               </p>
             </div>
           ) : (
-            <p className="text-2xl font-bold text-slate-300">
+            <p className="text-2xl font-bold text-slate-300 dark:text-slate-600">
               Unknown Origin
             </p>
           )}
         </div>
       </div>
 
-      <div className="h-[450px] w-full relative z-0 bg-slate-50/50">
+      <div className="h-[450px] w-full relative z-0 bg-slate-50/50 dark:bg-slate-900/50">
         <MapContainer 
           center={[location.lat, location.lng]} 
           zoom={4} 
@@ -192,10 +194,18 @@ export default function BreedMap({ breedName }: BreedMapProps) {
           zoomControl={false} // We'll add a custom one or rely on scroll
           className="h-full w-full outline-none"
         >
-          {/* Elegant light basemap */}
+          {/* Elegant light basemap for light mode */}
           <TileLayer
             url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+            className="dark:hidden"
+          />
+          
+          {/* Dark basemap for dark mode */}
+          <TileLayer
+            url="https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+            className="hidden dark:block"
           />
           
           <GeoJSON 
@@ -213,7 +223,7 @@ export default function BreedMap({ breedName }: BreedMapProps) {
         </MapContainer>
         
         {/* Decorative Overlay Gradient */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white/80 to-transparent pointer-events-none z-[400]"></div>
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white/80 to-transparent dark:from-slate-900/80 pointer-events-none z-[400]"></div>
       </div>
       
       {/* Refined Tooltip CSS */}
@@ -236,8 +246,17 @@ export default function BreedMap({ breedName }: BreedMapProps) {
           backdrop-filter: blur(4px);
           transition: all 0.3s ease;
         }
+        .dark .country-label {
+          background: rgba(30, 41, 59, 0.95);
+          border: 1px solid rgba(99, 102, 241, 0.3);
+          color: #e0e7ff;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
         .country-label:before {
           border-top-color: rgba(255, 255, 255, 0.98);
+        }
+        .dark .country-label:before {
+          border-top-color: rgba(30, 41, 59, 0.95);
         }
         .leaflet-tooltip-pane { z-index: 650; }
         

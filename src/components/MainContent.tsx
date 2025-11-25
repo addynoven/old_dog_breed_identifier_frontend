@@ -52,26 +52,26 @@ export default function MainContent({
   const hasContent = prediction || selectedBreedImage || selectedFile;
 
   return (
-    <main className="flex-1 relative overflow-hidden bg-slate-50">
+    <main className="flex-1 relative overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       {/* Animated Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-200/30 rounded-full blur-[120px] animate-blob"></div>
-        <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] bg-blue-200/30 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-[-10%] left-[20%] w-[40%] h-[40%] bg-indigo-200/30 rounded-full blur-[120px] animate-blob animation-delay-4000"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-200/30 dark:bg-purple-900/20 rounded-full blur-[120px] animate-blob"></div>
+        <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] bg-blue-200/30 dark:bg-blue-900/20 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-[-10%] left-[20%] w-[40%] h-[40%] bg-indigo-200/30 dark:bg-indigo-900/20 rounded-full blur-[120px] animate-blob animation-delay-4000"></div>
       </div>
 
       <div className="container mx-auto max-w-7xl px-4 py-12 pb-32 relative z-10">
         {/* Hero Section */}
         <div className={`relative z-50 transition-all duration-700 ease-in-out flex flex-col items-center justify-center ${hasContent ? 'min-h-[40vh] py-12' : 'min-h-[80vh]'}`}>
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/50 backdrop-blur-md border border-white/40 text-slate-600 text-sm font-medium shadow-sm">
+            <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/50 dark:bg-slate-800/50 backdrop-blur-md border border-white/40 dark:border-slate-700/40 text-slate-600 dark:text-slate-300 text-sm font-medium shadow-sm">
               ✨ AI-Powered Dog Breed Identifier
             </div>
-              <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 mb-6 tracking-tight leading-tight">
+              <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 dark:from-slate-100 dark:via-indigo-400 dark:to-slate-100 mb-6 tracking-tight leading-tight">
               Discover Your <br/>
-              <span className="text-indigo-600">Dog&apos;s Breed</span>
+              <span className="text-indigo-600 dark:text-indigo-400">Dog&apos;s Breed</span>
             </h1>
-            <p className="text-slate-600 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-slate-600 dark:text-slate-400 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-light">
               Upload a photo or search to instantly identify breeds and learn about their origins.
             </p>
           </div>

@@ -1,0 +1,2279 @@
+{
+  "n02085620-Chihuahua": {
+    "description": "Chihuahuas are pint-sized companions with huge personalities. Known for their fierce loyalty and spirited demeanor, these tiny dogs are surprisingly bold and make excellent watchdogs. They thrive on companionship and are perfect for apartment living, bringing endless charm and affection to their devoted owners.",
+    "traits": [
+      "Loyal",
+      "Bold",
+      "Spirited",
+      "Affectionate",
+      "Alert"
+    ],
+    "origin": "Mexico",
+    "height": "5-8 inches",
+    "weight": "2-6 lbs",
+    "lifespan": "12-20 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02085782-Japanese_spaniel": {
+    "description": "The Japanese Spaniel, or Chin, is an elegant and charming toy breed known for its distinctive cat-like qualities and aristocratic bearing. Affectionate and intelligent, they make devoted companions who thrive on indoor living and gentle attention. Their delicate nature requires a calm environment.",
+    "traits": [
+      "Elegant",
+      "Affectionate",
+      "Intelligent",
+      "Playful",
+      "Gentle"
+    ],
+    "origin": "Japan",
+    "height": "8-11 inches",
+    "weight": "4-9 lbs",
+    "lifespan": "10-12 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Low",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02086079-Pekinese": {
+    "description": "The Pekinese is a regal toy breed with a distinctive 'lion's mane' and a dignified, independent spirit. Originating from ancient China, they are known for their fearless loyalty to their families, despite their small size. These charming companions prefer a calm environment and offer unwavering affection to their chosen humans.",
+    "traits": [
+      "Independent",
+      "Loyal",
+      "Dignified",
+      "Brave"
+    ],
+    "origin": "China",
+    "height": "6-9 inches",
+    "weight": "7-14 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Low",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02086240-Shih-Tzu": {
+    "description": "The Shih Tzu is a charming \"lion dog\" known for its luxurious long coat and friendly disposition. Bred as companions, they are affectionate, playful, and thrive on human interaction, making them wonderful lapdogs and adaptable family members with a joyful spirit.",
+    "traits": [
+      "Affectionate",
+      "Playful",
+      "Outgoing",
+      "Loyal",
+      "Gentle"
+    ],
+    "origin": "Tibet/China",
+    "height": "8-11 inches",
+    "weight": "9-16 lbs",
+    "lifespan": "10-16 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02085936-Maltese_dog": {
+    "description": "The Maltese is an ancient toy breed renowned for its flowing, silky white coat and charming personality. These affectionate and gentle companions thrive on human companionship, making them ideal lapdogs and delightful household members. Despite their delicate appearance, they are playful and lively, known for forming strong, loving bonds with their families.",
+    "traits": [
+      "Affectionate",
+      "Gentle",
+      "Playful",
+      "Charming",
+      "Intelligent"
+    ],
+    "origin": "Malta",
+    "height": "7-9 inches",
+    "weight": "4-7 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02086646-Blenheim_spaniel": {
+    "description": "The Blenheim Spaniel, often a Blenheim-colored Cavalier King Charles Spaniel, is a delightful, affectionate companion dog. Known for its gentle nature and expressive eyes, it thrives on human companionship and cuddles. This adaptable toy breed makes an excellent family pet, offering a cheerful disposition and docile temperament, making it easy to train and a joy to live with.",
+    "traits": [
+      "Affectionate",
+      "Gentle",
+      "Cheerful",
+      "Adaptable",
+      "Docile"
+    ],
+    "origin": "United Kingdom",
+    "height": "12-13 inches",
+    "weight": "13-18 lbs",
+    "lifespan": "10-14 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02086910-papillon": {
+    "description": "The Papillon, named for its distinctive butterfly-like ears, is an elegant and intelligent toy breed. Agile and alert, these small dogs possess a big personality, excelling in dog sports and loving to be at the center of family attention. They are cheerful and affectionate companions, known for their playful spirit and strong bond with owners.",
+    "traits": [
+      "Intelligent",
+      "Agile",
+      "Friendly",
+      "Alert",
+      "Playful"
+    ],
+    "origin": "France/Belgium",
+    "height": "8-11 inches",
+    "weight": "5-10 lbs",
+    "lifespan": "14-16 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02087394-Rhodesian_ridgeback": {
+    "description": "The Rhodesian Ridgeback is a powerful, dignified hound known for the distinctive ridge of hair on its back. Originally bred to hunt lions in Africa, they are courageous, intelligent, and protective. These loyal companions require consistent training, early socialization, and ample exercise to thrive as well-behaved family members.",
+    "traits": [
+      "Loyal",
+      "Brave",
+      "Intelligent",
+      "Independent",
+      "Dignified"
+    ],
+    "origin": "Southern Africa",
+    "height": "24-27 inches",
+    "weight": "70-85 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02087046-toy_terrier": {
+    "description": "The Toy Terrier is a diminutive yet spirited companion, known for its sleek appearance and lively demeanor. These intelligent and affectionate dogs form strong bonds with their families, offering boundless loyalty and alert watchfulness in a small package, making them ideal for apartment living.",
+    "traits": [
+      "Spirited",
+      "Affectionate",
+      "Alert",
+      "Loyal",
+      "Agile"
+    ],
+    "origin": "United Kingdom",
+    "height": "10-12 inches",
+    "weight": "5-10 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02088094-Afghan_hound": {
+    "description": "The Afghan Hound is an aristocratic sighthound, instantly recognizable by its flowing, silky coat and elegant demeanor. An ancient breed, they possess a dignified yet independent nature, often aloof but deeply loyal to their families. This unique breed requires dedicated grooming and regular exercise.",
+    "traits": [
+      "Independent",
+      "Dignified",
+      "Aloof",
+      "Loyal",
+      "Playful"
+    ],
+    "origin": "Afghanistan",
+    "height": "25-27 inches",
+    "weight": "50-60 lbs",
+    "lifespan": "10-14 years",
+    "size": "Large",
+    "coatType": "Long",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02088238-basset": {
+    "description": "A charming, low-slung hound with an unmistakable mournful expression. Known for its exceptional sense of smell and long, droopy ears, the Basset Hound is a gentle, affectionate companion. Despite their somewhat lazy appearance, they love a good scent trail and make loyal, easygoing family pets.",
+    "traits": [
+      "Affectionate",
+      "Gentle",
+      "Loyal",
+      "Stubborn",
+      "Patient"
+    ],
+    "origin": "France",
+    "height": "14-15 inches",
+    "weight": "40-65 lbs",
+    "lifespan": "10-12 years",
+    "size": "Medium",
+    "coatType": "Short",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02088364-beagle": {
+    "description": "Cheerful, curious, and compact hounds, Beagles are known for their melodious bay and exceptional scenting ability. Originally bred for hunting hare, they are friendly companions, playful with families, and possess an endearing, often mischievous, personality. Their keen nose can lead them on adventures.",
+    "traits": [
+      "Curious",
+      "Friendly",
+      "Playful",
+      "Stubborn",
+      "Energetic"
+    ],
+    "origin": "England",
+    "height": "13-15 inches",
+    "weight": "18-30 lbs",
+    "lifespan": "10-15 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02088466-bloodhound": {
+    "description": "The Bloodhound is a noble and gentle giant, celebrated for its unparalleled sense of smell and relentless tracking abilities. Originating from medieval monasteries, it's a calm, patient, and affectionate companion despite its powerful build. Its distinctive wrinkled face, long droopy ears, and deep bark are iconic features of this tireless scent hound.",
+    "traits": [
+      "Scent-driven",
+      "Gentle",
+      "Patient",
+      "Affectionate",
+      "Stubborn"
+    ],
+    "origin": "Belgium",
+    "height": "23-27 inches",
+    "weight": "80-110 lbs",
+    "lifespan": "10-12 years",
+    "size": "Giant",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02088632-bluetick": {
+    "description": "The Bluetick Coonhound is a striking, athletic scent hound famed for its distinctive mottled blue coat. Bred for hunting, they boast an incredible nose and tenacious spirit. Loyal and affectionate with their families, these dogs are highly energetic and require ample exercise and mental stimulation to prevent boredom and destructive behaviors.",
+    "traits": [
+      "Loyal",
+      "Energetic",
+      "Vocal",
+      "Tenacious",
+      "Affectionate"
+    ],
+    "origin": "United States",
+    "height": "21-27 inches",
+    "weight": "45-80 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02089078-black-and-tan_coonhound": {
+    "description": "The Black-and-tan Coonhound is a noble American hunting dog, famed for its keen scenting ability and distinctive black and tan coat. With a melodic bay and friendly demeanor, they excel as devoted companions for active families, requiring ample exercise and mental stimulation. Their laid-back nature indoors contrasts with their drive in the field.",
+    "traits": [
+      "Loyal",
+      "Scent-driven",
+      "Friendly",
+      "Stubborn",
+      "Vocal"
+    ],
+    "origin": "United States",
+    "height": "23-27 inches",
+    "weight": "65-110 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02089867-Walker_hound": {
+    "description": "The Walker Hound, officially the Treeing Walker Coonhound, is an agile and intelligent American breed renowned for its tracking abilities and distinctive bay. Bred for trailing and treeing raccoons, they are energetic, vocal, and loyal companions that thrive on activity and a job to do. Their keen nose and endurance make them superb hunters.",
+    "traits": [
+      "Energetic",
+      "Loyal",
+      "Intelligent",
+      "Vocal",
+      "Determined"
+    ],
+    "origin": "United States",
+    "height": "20-27 inches",
+    "weight": "50-70 lbs",
+    "lifespan": "10-13 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02089973-English_foxhound": {
+    "description": "The English Foxhound is a powerful, energetic hound bred for centuries to hunt fox across the English countryside. Known for its incredible stamina and melodious bay, this breed thrives on exercise and companionship. While rare as a household pet, they are good-natured and excellent working dogs.",
+    "traits": [
+      "Energetic",
+      "Tolerant",
+      "Sociable",
+      "Determined",
+      "Athletic"
+    ],
+    "origin": "England",
+    "height": "21-25 inches",
+    "weight": "55-75 lbs",
+    "lifespan": "10-13 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02090379-redbone": {
+    "description": "Redbone Coonhounds are striking, red-coated hounds renowned for their exceptional scenting ability and melodious bay. Bred for hunting raccoons and big game, they are tenacious workers in the field and affectionate, easygoing companions at home, though they require ample exercise to thrive.",
+    "traits": [
+      "Tenacious",
+      "Affectionate",
+      "Energetic",
+      "Intelligent",
+      "Loyal"
+    ],
+    "origin": "United States",
+    "height": "21-27 inches",
+    "weight": "45-70 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02090622-borzoi": {
+    "description": "The Borzoi is an elegant Russian sighthound, originally bred for hunting wolves. Renowned for its aristocratic appearance and incredible speed, this graceful giant possesses a calm, gentle demeanor indoors. Reserved with strangers but deeply devoted to its family, the Borzoi embodies both power and serenity.",
+    "traits": [
+      "Elegant",
+      "Calm",
+      "Gentle",
+      "Independent",
+      "Affectionate"
+    ],
+    "origin": "Russia",
+    "height": "26-32 inches",
+    "weight": "60-105 lbs",
+    "lifespan": "10-12 years",
+    "size": "Giant",
+    "coatType": "Long",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02090721-Irish_wolfhound": {
+    "description": "The Irish Wolfhound is an ancient breed, a true gentle giant known for its towering stature and dignified demeanor. Originally bred for hunting wolves and guarding, they are now cherished companions. Despite their imposing size, they possess a calm and affectionate nature, making them wonderful, though short-lived, family members.",
+    "traits": [
+      "Gentle",
+      "Dignified",
+      "Patient",
+      "Loyal",
+      "Courageous"
+    ],
+    "origin": "Ireland",
+    "height": "30-35 inches",
+    "weight": "105-150 lbs",
+    "lifespan": "6-8 years",
+    "size": "Giant",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02091032-Italian_greyhound": {
+    "description": "The Italian Greyhound is a miniature sighthound, elegant and graceful, known for its slender build and affectionate nature. Despite their delicate appearance, they are playful and fast, enjoying short bursts of activity followed by long cuddle sessions. They thrive on companionship and are devoted to their families.",
+    "traits": [
+      "Affectionate",
+      "Agile",
+      "Gentle",
+      "Playful",
+      "Devoted"
+    ],
+    "origin": "Italy",
+    "height": "13-15 inches",
+    "weight": "7-14 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02091134-whippet": {
+    "description": "The Whippet is an elegant, athletic sighthound known for its incredible speed and graceful silhouette. Often called a \"poor man's Greyhound,\" they are gentle, affectionate companions indoors, enjoying cozy naps, but transform into swift, agile runners outdoors, requiring regular exercise to thrive.",
+    "traits": [
+      "Affectionate",
+      "Gentle",
+      "Agile",
+      "Quiet"
+    ],
+    "origin": "England",
+    "height": "18-22 inches",
+    "weight": "25-40 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02091244-Ibizan_hound": {
+    "description": "The Ibizan Hound, or 'Beezer', is an elegant, ancient sighthound originating from Spain's Balearic Islands. Known for its graceful athleticism, striking amber eyes, and sensitive, clownish personality, this breed excels at leaping. They are loyal companions and require significant exercise and mental stimulation to thrive.",
+    "traits": [
+      "Agile",
+      "Loyal",
+      "Intelligent",
+      "Energetic",
+      "Playful"
+    ],
+    "origin": "Balearic Islands (Spain)",
+    "height": "22.5-27.5 inches",
+    "weight": "45-65 lbs",
+    "lifespan": "11-14 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02091467-Norwegian_elkhound": {
+    "description": "An ancient Norse breed, the Norwegian Elkhound is a hardy Spitz-type dog renowned for its courage and tracking ability in hunting big game like elk. Intelligent and loyal, they make vigilant watchdogs and affectionate family companions, thriving with an active lifestyle and plenty of mental stimulation.",
+    "traits": [
+      "Loyal",
+      "Brave",
+      "Intelligent",
+      "Independent",
+      "Energetic"
+    ],
+    "origin": "Norway",
+    "height": "19.5-20.5 inches",
+    "weight": "48-55 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02091635-otterhound": {
+    "description": "The Otterhound is a shaggy, boisterous scent hound originating from Great Britain. Known for its powerful swimming ability, webbed feet, and distinctive deep voice, this breed is an affectionate and playful family companion. Despite its scruffy appearance, it's a loyal dog with a strong prey drive, requiring secure containment and consistent training.",
+    "traits": [
+      "Affectionate",
+      "Boisterous",
+      "Independent",
+      "Loyal",
+      "Energetic"
+    ],
+    "origin": "Great Britain",
+    "height": "24-27 inches",
+    "weight": "65-115 lbs",
+    "lifespan": "10-13 years",
+    "size": "Large",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Very Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02091831-Saluki": {
+    "description": "The ancient Saluki, or \"Royal Dog of Egypt,\" is a swift, elegant sighthound known for its graceful appearance and independent nature. Bred for speed and endurance in desert hunting, they are sensitive, dignified companions that thrive with ample space to run and a calm, gentle household.",
+    "traits": [
+      "Dignified",
+      "Independent",
+      "Graceful",
+      "Gentle",
+      "Reserved"
+    ],
+    "origin": "Middle East",
+    "height": "23-28 inches",
+    "weight": "45-65 lbs",
+    "lifespan": "12-14 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02092002-Scottish_deerhound": {
+    "description": "The Scottish Deerhound is an ancient, majestic breed resembling a large, shaggy Greyhound. Noble and elegant, they were historically bred to hunt deer in the Highlands. Known for their gentle, affectionate nature and dignified demeanor, they make loyal and calm companions, though they possess a powerful prey drive and require regular exercise.",
+    "traits": [
+      "Gentle",
+      "Noble",
+      "Affectionate",
+      "Dignified",
+      "Loyal"
+    ],
+    "origin": "Scotland",
+    "height": "28-32 inches",
+    "weight": "75-110 lbs",
+    "lifespan": "8-11 years",
+    "size": "Giant",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02092339-Weimaraner": {
+    "description": "The 'Grey Ghost,' Weimaraners are elegant, athletic, and intelligent hunting dogs known for their distinctive silver-grey coat and striking amber eyes. Highly energetic, they demand significant exercise and mental stimulation. They thrive on being part of the family, often forming strong, affectionate bonds, but require consistent training and socialization.",
+    "traits": [
+      "Loyal",
+      "Energetic",
+      "Intelligent",
+      "Affectionate",
+      "Demanding"
+    ],
+    "origin": "Germany",
+    "height": "23-27 inches",
+    "weight": "55-90 lbs",
+    "lifespan": "10-13 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02093256-Staffordshire_bullterrier": {
+    "description": "Known affectionately as 'Nanny Dogs,' the Staffordshire Bull Terrier is a fearless yet incredibly affectionate companion. Despite their muscular build, they possess a gentle nature and unwavering devotion to their human family. Intelligent and playful, Staffies thrive on interaction, making loyal, loving pets, though they require proper socialization.",
+    "traits": [
+      "Loyal",
+      "Affectionate",
+      "Brave",
+      "Playful",
+      "Intelligent"
+    ],
+    "origin": "England",
+    "height": "14-16 inches",
+    "weight": "24-38 lbs",
+    "lifespan": "12-14 years",
+    "size": "Medium",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02093428-American_Staffordshire_terrier": {
+    "description": "Powerful, confident, and intelligent, the American Staffordshire Terrier is a devoted and courageous companion. Known for their loyalty and protective nature, they thrive on activity and proper training, making them excellent family members for experienced owners who understand their needs and provide ample socialization.",
+    "traits": [
+      "Loyal",
+      "Confident",
+      "Courageous",
+      "Intelligent",
+      "Affectionate"
+    ],
+    "origin": "United States",
+    "height": "17-19 inches",
+    "weight": "40-70 lbs",
+    "lifespan": "12-16 years",
+    "size": "Medium",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02093647-Bedlington_terrier": {
+    "description": "The Bedlington Terrier, with its distinctive lamb-like appearance and soft, curly coat, is a unique and elegant breed. Beneath their gentle exterior lies a tenacious, agile, and courageous terrier. Originally bred for hunting vermin, they are now cherished as affectionate and playful companions, known for their loyalty and athletic prowess, making them engaging family pets.",
+    "traits": [
+      "Affectionate",
+      "Playful",
+      "Loyal",
+      "Agile",
+      "Tenacious"
+    ],
+    "origin": "England",
+    "height": "15.5-17.5 inches",
+    "weight": "17-23 lbs",
+    "lifespan": "11-16 years",
+    "size": "Small",
+    "coatType": "Curly",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02093754-Border_terrier": {
+    "description": "A hardy, spirited terrier from the Anglo-Scottish border, originally bred to bolt foxes and otters. Known for their distinctive \"otter head\" and wiry coat, they are intelligent, affectionate, and courageous companions. Despite their small size, they possess immense stamina and a keen prey drive, making them excellent, active family pets.",
+    "traits": [
+      "Hardy",
+      "Spirited",
+      "Intelligent",
+      "Affectionate",
+      "Courageous"
+    ],
+    "origin": "Anglo-Scottish Border (Great Britain)",
+    "height": "9.5-11 inches",
+    "weight": "11.5-15.5 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02093859-Kerry_blue_terrier": {
+    "description": "The Kerry Blue Terrier is an elegant, well-muscled working terrier from Ireland. Known for its distinctive blue-grey, soft, wavy coat, it's a versatile dog historically used for hunting and herding. Intelligent and spirited, they make loyal, protective companions for experienced owners who can provide consistent training and plenty of activity.",
+    "traits": [
+      "Spirited",
+      "Intelligent",
+      "Loyal",
+      "Bold",
+      "Affectionate"
+    ],
+    "origin": "Ireland",
+    "height": "17.5-19.5 inches",
+    "weight": "33-40 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Curly",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02093991-Irish_terrier": {
+    "description": "The Irish Terrier is a spirited, medium-sized dog known for its fiery red, wiry coat and fearless yet devoted personality. Originating from Ireland, they were bred as versatile farm dogs, excelling at hunting vermin and guarding property. Intelligent and energetic, they make courageous and loving companions for active individuals or families who can provide ample exercise and training.",
+    "traits": [
+      "Loyal",
+      "Brave",
+      "Energetic",
+      "Smart",
+      "Spirited"
+    ],
+    "origin": "Ireland",
+    "height": "18 inches",
+    "weight": "25-27 lbs",
+    "lifespan": "13-15 years",
+    "size": "Medium",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02094114-Norfolk_terrier": {
+    "description": "The Norfolk Terrier is a spirited, compact companion known for its lively personality and fearless nature. Originating from England, these plucky terriers are always up for an adventure, yet equally content to snuggle. Their distinctive wire coat and expressive eyes add to their undeniable charm, making them beloved family members.",
+    "traits": [
+      "Fearless",
+      "Spirited",
+      "Affectionate",
+      "Independent",
+      "Alert"
+    ],
+    "origin": "England",
+    "height": "9-10 inches",
+    "weight": "11-12 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02094258-Norwich_terrier": {
+    "description": "The Norwich Terrier is a plucky, affectionate, and sturdy companion known for its fearless spirit and charming personality. Originally bred to hunt vermin, these small dogs pack a big punch of loyalty and devotion. They possess a weatherproof, wiry coat and make excellent, lively family pets, thriving on companionship and adventure.",
+    "traits": [
+      "Fearless",
+      "Affectionate",
+      "Spirited",
+      "Hardy",
+      "Loyal"
+    ],
+    "origin": "United Kingdom",
+    "height": "9-11 inches",
+    "weight": "10-14 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02094433-Yorkshire_terrier": {
+    "description": "A spunky, confident toy breed with a luxurious, silky coat. Despite their small stature, Yorkshire Terriers possess a big personality, often displaying courage and an adventurous spirit. They are affectionate companions, known for their charming demeanor and unwavering loyalty to their families.",
+    "traits": [
+      "Confident",
+      "Affectionate",
+      "Spirited",
+      "Loyal",
+      "Intelligent"
+    ],
+    "origin": "Yorkshire, England",
+    "height": "7-8 inches",
+    "weight": "4-7 lbs",
+    "lifespan": "11-15 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02095314-wire-haired_fox_terrier": {
+    "description": "The Wire-haired Fox Terrier is a spirited, intelligent, and confident companion known for its distinctive wiry coat. Originally bred for hunting, they are full of energy and possess a playful, adventurous spirit. These feisty and alert dogs make engaging family members, requiring consistent training and ample activity to thrive.",
+    "traits": [
+      "Energetic",
+      "Confident",
+      "Intelligent",
+      "Playful",
+      "Feisty"
+    ],
+    "origin": "England",
+    "height": "14-16 inches",
+    "weight": "15-18 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02116738-African_hunting_dog": {
+    "description": "The African Hunting Dog, a striking and intelligent canid, is celebrated for its unique mottled coat and large, rounded ears. Highly social and cooperative, this energetic hunter thrives in a pack environment, showcasing incredible endurance and complex communication. A truly distinct and ancient lineage.",
+    "traits": [
+      "Intelligent",
+      "Social",
+      "Energetic",
+      "Cooperative",
+      "Agile"
+    ],
+    "origin": "Sub-Saharan Africa",
+    "height": "24-30 inches",
+    "weight": "40-70 lbs",
+    "lifespan": "6-10 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Very Rare",
+    "goodWithKids": "No"
+  },
+  "n02095570-Lakeland_terrier": {
+    "description": "The Lakeland Terrier is a spirited, intelligent dog from England's Lake District, originally bred to hunt vermin. Known for its charming and playful nature, it forms devoted family bonds. This alert and confident terrier boasts a distinctive wiry coat and requires regular exercise and mental stimulation to thrive.",
+    "traits": [
+      "Spirited",
+      "Intelligent",
+      "Playful",
+      "Confident",
+      "Affectionate"
+    ],
+    "origin": "England",
+    "height": "14-15 inches",
+    "weight": "15-17 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02095889-Sealyham_terrier": {
+    "description": "The Sealyham Terrier is a charming, sturdy Welsh terrier, recognized by its distinctive white, wiry coat and expressive eyes. Bred for hunting vermin, they possess a tenacious spirit combined with an affectionate, playful nature. They are alert and make loyal companions, often surprising with their agility despite their compact size.",
+    "traits": [
+      "Feisty",
+      "Loyal",
+      "Playful",
+      "Alert",
+      "Tenacious"
+    ],
+    "origin": "Wales, United Kingdom",
+    "height": "10-11 inches",
+    "weight": "20-24 lbs",
+    "lifespan": "12-14 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Very Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02096177-cairn": {
+    "description": "A plucky and intelligent terrier from the Scottish Highlands, the Cairn is a small dog with a big personality. Known for their shaggy, weather-resistant coat and keen instincts, they were originally bred to hunt vermin. Cairns are loyal, curious, and playful companions who make excellent, albeit sometimes mischievous, family pets.",
+    "traits": [
+      "Feisty",
+      "Loyal",
+      "Curious",
+      "Playful",
+      "Alert"
+    ],
+    "origin": "Scotland",
+    "height": "9.5-10 inches",
+    "weight": "13-14 lbs",
+    "lifespan": "13-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02096051-Airedale": {
+    "description": "Known as the \"King of Terriers,\" the Airedale is a large, versatile, and confident dog. Originating in England, they are intelligent and brave, requiring consistent training and ample exercise. With their distinctive wiry coat, they make excellent, loyal companions for active individuals or families.",
+    "traits": [
+      "Intelligent",
+      "Confident",
+      "Brave",
+      "Playful",
+      "Independent"
+    ],
+    "origin": "England",
+    "height": "22-23 inches",
+    "weight": "40-70 lbs",
+    "lifespan": "10-13 years",
+    "size": "Large",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02096294-Australian_terrier": {
+    "description": "The Australian Terrier is a plucky, intelligent, and affectionate dog known for its scruffy charm and lively spirit. Originating in Australia, this small yet sturdy terrier makes a wonderful companion, blending playful energy with a loyal, watchful nature. They are courageous and thrive in active homes.",
+    "traits": [
+      "Brave",
+      "Loyal",
+      "Spirited",
+      "Intelligent",
+      "Affectionate"
+    ],
+    "origin": "Australia",
+    "height": "10-11 inches",
+    "weight": "14-16 lbs",
+    "lifespan": "11-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02097658-silky_terrier": {
+    "description": "The Silky Terrier is an elegant, spirited toy dog from Australia, known for its beautiful, long, silky blue and tan coat. Combining the feistiness of a terrier with the charm of a companion, they are alert, intelligent, and confident. Despite their small size, they possess a big personality, making them lively and engaging pets for active individuals or families.",
+    "traits": [
+      "Spirited",
+      "Alert",
+      "Playful",
+      "Confident",
+      "Intelligent"
+    ],
+    "origin": "Australia",
+    "height": "9-10 inches",
+    "weight": "8-10 lbs",
+    "lifespan": "13-15 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02096437-Dandie_Dinmont": {
+    "description": "The Dandie Dinmont is a unique Scottish terrier, distinctive for its 'pepper and mustard' coat and characteristic topknot. Brave yet affectionate, this charming dog possesses a big personality in a small package. Intelligent and playful, they make devoted companions, though they retain a strong terrier instinct for digging and barking.",
+    "traits": [
+      "Brave",
+      "Affectionate",
+      "Intelligent",
+      "Playful",
+      "Devoted"
+    ],
+    "origin": "Scotland",
+    "height": "8-11 inches",
+    "weight": "18-24 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Very Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02096585-Boston_bull": {
+    "description": "The 'American Gentleman,' the Boston Terrier is a charming, intelligent, and lively companion. Known for their distinctive 'tuxedo' coat, expressive eyes, and friendly disposition, they make excellent family pets and city dwellers, adapting well to various living situations with love and enthusiasm.",
+    "traits": [
+      "Friendly",
+      "Intelligent",
+      "Lively",
+      "Affectionate",
+      "Gentle"
+    ],
+    "origin": "United States",
+    "height": "12-17 inches",
+    "weight": "12-25 lbs",
+    "lifespan": "11-13 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02097047-miniature_schnauzer": {
+    "description": "The Miniature Schnauzer is a lively, intelligent, and sturdy terrier known for its distinctive bearded face and bushy eyebrows. Originating as a rat catcher, they make excellent companions, blending a playful spirit with a protective nature. They are alert and devoted, thriving on interaction with their families.",
+    "traits": [
+      "Intelligent",
+      "Feisty",
+      "Alert",
+      "Loyal",
+      "Playful"
+    ],
+    "origin": "Germany",
+    "height": "12-14 inches",
+    "weight": "11-20 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02097130-giant_schnauzer": {
+    "description": "The Giant Schnauzer is a powerful, intelligent, and protective working dog, originally bred in Germany. Known for its imposing presence and distinctive wiry coat, this loyal companion thrives on mental and physical challenges. They are fiercely devoted to their families, making excellent guardians with proper training and socialization.",
+    "traits": [
+      "Intelligent",
+      "Loyal",
+      "Protective",
+      "Energetic",
+      "Bold"
+    ],
+    "origin": "Germany",
+    "height": "23.5-27.5 inches",
+    "weight": "55-85 lbs",
+    "lifespan": "10-12 years",
+    "size": "Giant",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02097209-standard_schnauzer": {
+    "description": "The Standard Schnauzer is a robust, intelligent, and versatile medium-sized dog hailing from Germany. Known for their distinctive wiry coat, bushy eyebrows, and beard, they were originally farm dogs. They are spirited, protective, and energetic companions, requiring consistent training and ample activity to thrive.",
+    "traits": [
+      "Smart",
+      "Loyal",
+      "Energetic",
+      "Protective",
+      "Spirited"
+    ],
+    "origin": "Germany",
+    "height": "17.5-19.5 inches",
+    "weight": "30-50 lbs",
+    "lifespan": "13-16 years",
+    "size": "Medium",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02097298-Scotch_terrier": {
+    "description": "The Scottish Terrier, often called a \"Scottie,\" is a compact, feisty, and independent breed. Known for its distinctive silhouette and confident demeanor, it's a loyal companion with a surprisingly big personality. They require consistent training and early socialization to thrive in family life, especially with children.",
+    "traits": [
+      "Independent",
+      "Brave",
+      "Loyal",
+      "Spirited",
+      "Tenacious"
+    ],
+    "origin": "Scotland",
+    "height": "10-11 inches",
+    "weight": "18-22 lbs",
+    "lifespan": "11-13 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02097474-Tibetan_terrier": {
+    "description": "Originating as the 'Holy Dogs of Tibet,' Tibetan Terriers are shaggy, medium-sized companions known for their playful spirit, intelligence, and devoted nature. With a distinctive double coat and agile build, they make charming family pets who thrive on companionship and moderate activity, often displaying a watchful demeanor.",
+    "traits": [
+      "Playful",
+      "Intelligent",
+      "Devoted",
+      "Agile",
+      "Watchful"
+    ],
+    "origin": "Tibet",
+    "height": "14-16 inches",
+    "weight": "20-30 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02098105-soft-coated_wheaten_terrier": {
+    "description": "Lively, intelligent, playful, and devoted, the Soft-coated Wheaten Terrier is known for its distinctive soft, silky coat and enthusiastic \"Wheaten Greetin'.\" They are affectionate family dogs, often described as happy-go-lucky, requiring regular grooming and exercise to thrive. Originating from Ireland, they make charming and active companions.",
+    "traits": [
+      "Playful",
+      "Affectionate",
+      "Intelligent",
+      "Energetic",
+      "Devoted"
+    ],
+    "origin": "Ireland",
+    "height": "17-19 inches",
+    "weight": "30-40 lbs",
+    "lifespan": "12-14 years",
+    "size": "Medium",
+    "coatType": "Medium",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02098286-West_Highland_white_terrier": {
+    "description": "Cheerful, confident, and spirited, the West Highland White Terrier, or \"Westie,\" is a beloved small dog from Scotland. Known for its iconic white double coat and playful nature, this lively terrier makes an excellent family companion. Intelligent and curious, Westies enjoy exploring and bring a charming, feisty personality to any home.",
+    "traits": [
+      "Confident",
+      "Spirited",
+      "Loyal",
+      "Playful",
+      "Curious"
+    ],
+    "origin": "Scotland",
+    "height": "10-11 inches",
+    "weight": "13-20 lbs",
+    "lifespan": "13-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02098413-Lhasa": {
+    "description": "A venerable companion dog from the Himalayas, the Lhasa Apso is known for its distinctive long coat and keen intelligence. Bred to be watchdogs in Tibetan monasteries, they are alert, confident, and fiercely loyal to their families, often maintaining a playful, mischievous streak. Their robust nature belies their small size.",
+    "traits": [
+      "Alert",
+      "Confident",
+      "Loyal",
+      "Independent",
+      "Playful"
+    ],
+    "origin": "Tibet",
+    "height": "10-11 inches",
+    "weight": "12-18 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02099267-flat-coated_retriever": {
+    "description": "The Flat-coated Retriever is a perpetually happy and energetic companion, often called the 'Peter Pan' of the dog world due to their enduring puppy-like enthusiasm. Intelligent and affectionate, they excel as family pets and working retrievers, requiring ample exercise and mental stimulation to thrive.",
+    "traits": [
+      "Cheerful",
+      "Energetic",
+      "Affectionate",
+      "Intelligent",
+      "Playful"
+    ],
+    "origin": "England",
+    "height": "22-24.5 inches",
+    "weight": "55-70 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Medium",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02099429-curly-coated_retriever": {
+    "description": "The Curly-coated Retriever is an elegant, intelligent gundog distinguished by its unique tight, crisp curls. Known for its independent yet loyal nature, this breed excels in various dog sports and as a devoted family companion. They are energetic and require ample exercise and mental stimulation to thrive.",
+    "traits": [
+      "Intelligent",
+      "Loyal",
+      "Energetic",
+      "Independent",
+      "Playful"
+    ],
+    "origin": "England",
+    "height": "23-27 inches",
+    "weight": "50-80 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Curly",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02099601-golden_retriever": {
+    "description": "The Golden Retriever is a beloved, friendly, and intelligent breed known for its gentle nature and beautiful golden coat. Originally bred as gun dogs to retrieve fowl, they excel as family companions, service dogs, and therapy dogs, requiring plenty of exercise and human interaction.",
+    "traits": [
+      "Friendly",
+      "Intelligent",
+      "Devoted",
+      "Gentle",
+      "Playful"
+    ],
+    "origin": "Scotland",
+    "height": "21.5-24 inches",
+    "weight": "55-75 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02099712-Labrador_retriever": {
+    "description": "Friendly, outgoing, and high-spirited, the Labrador Retriever is one of the most popular dog breeds. Known for its gentle nature and eagerness to please, the Lab excels as a family companion, service dog, and hunting partner, always ready for adventure and play.",
+    "traits": [
+      "Friendly",
+      "Intelligent",
+      "Loyal",
+      "Energetic",
+      "Gentle"
+    ],
+    "origin": "Newfoundland, Canada",
+    "height": "21.5-24.5 inches",
+    "weight": "55-80 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02099849-Chesapeake_Bay_retriever": {
+    "description": "The Chesapeake Bay Retriever is a powerful, intelligent American sporting dog renowned for its exceptional retrieving ability in icy waters. With a waterproof double coat and incredible drive, they are devoted, protective companions. Chessies thrive with active families, excelling in outdoor adventures and dog sports, requiring consistent training and socialization.",
+    "traits": [
+      "Loyal",
+      "Brave",
+      "Intelligent",
+      "Protective",
+      "Energetic"
+    ],
+    "origin": "United States",
+    "height": "21-26 inches",
+    "weight": "55-80 lbs",
+    "lifespan": "10-13 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02100236-German_short-haired_pointer": {
+    "description": "The German Shorthaired Pointer is a versatile and energetic hunting dog, renowned for its intelligence, loyalty, and affectionate nature. A superb companion for active families, they thrive on ample exercise and mental stimulation. Their distinctive short coat is easy to maintain, making them a popular choice for those seeking a dedicated and lively canine partner.",
+    "traits": [
+      "Energetic",
+      "Loyal",
+      "Intelligent",
+      "Affectionate",
+      "Trainable"
+    ],
+    "origin": "Germany",
+    "height": "21-25 inches",
+    "weight": "45-70 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02100583-vizsla": {
+    "description": "The Vizsla is a sleek, athletic 'Velcro dog' known for its striking golden-rust coat and affectionate nature. Highly energetic and intelligent, this Hungarian hunting dog forms strong bonds with its family, thriving on companionship and plenty of exercise. They are excellent companions for active owners who can meet their high demands for activity.",
+    "traits": [
+      "Affectionate",
+      "Energetic",
+      "Intelligent",
+      "Loyal",
+      "Athletic"
+    ],
+    "origin": "Hungary",
+    "height": "21-24 inches",
+    "weight": "45-60 lbs",
+    "lifespan": "10-14 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02100735-English_setter": {
+    "description": "The elegant English Setter is a graceful, athletic bird dog known for its striking feathered coat and gentle disposition. Affectionate and intelligent, they possess a sweet nature, making them devoted family companions. They thrive in active households that can provide ample exercise and mental stimulation, showcasing their energetic yet refined spirit.",
+    "traits": [
+      "Gentle",
+      "Affectionate",
+      "Energetic",
+      "Intelligent",
+      "Friendly"
+    ],
+    "origin": "England",
+    "height": "24-27 inches",
+    "weight": "45-80 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Long",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02100877-Irish_setter": {
+    "description": "The Irish Setter is a striking, elegant gundog renowned for its beautiful flowing red coat and boundless energy. Intelligent, playful, and affectionate, they make devoted companions for active families. These outgoing dogs require significant exercise and mental stimulation to thrive, loving to be at the center of attention.",
+    "traits": [
+      "Energetic",
+      "Playful",
+      "Affectionate",
+      "Intelligent",
+      "Outgoing"
+    ],
+    "origin": "Ireland",
+    "height": "25-27 inches",
+    "weight": "60-70 lbs",
+    "lifespan": "12-15 years",
+    "size": "Large",
+    "coatType": "Long",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02102040-English_springer": {
+    "description": "Cheerful, eager-to-please, and intelligent, the English Springer Spaniel is a devoted family companion and an enthusiastic field dog. Known for their boundless energy and happy tail wags, they thrive on activity and human interaction, making them wonderful pets for active households.",
+    "traits": [
+      "Loyal",
+      "Energetic",
+      "Intelligent",
+      "Affectionate",
+      "Eager"
+    ],
+    "origin": "England",
+    "height": "19-20 inches",
+    "weight": "40-50 lbs",
+    "lifespan": "12-14 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02101006-Gordon_setter": {
+    "description": "The Gordon Setter is a striking black and tan bird dog, originating from Scotland. Intelligent and devoted, they are loyal companions known for their athletic build and affectionate nature. They require ample exercise and thrive in active homes where their strong hunting instincts and keen minds can be engaged.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Energetic",
+      "Affectionate",
+      "Devoted"
+    ],
+    "origin": "Scotland",
+    "height": "23-27 inches",
+    "weight": "45-80 lbs",
+    "lifespan": "12-15 years",
+    "size": "Large",
+    "coatType": "Long",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02101388-Brittany_spaniel": {
+    "description": "The Brittany Spaniel is an energetic and intelligent gun dog, celebrated for its versatility and cheerful disposition. Originally bred for bird hunting, they are agile and eager to please, making them excellent companions for active families. Their affectionate nature and trainability thrive with consistent exercise and mental stimulation, easily transitioning from field to beloved family pet.",
+    "traits": [
+      "Energetic",
+      "Intelligent",
+      "Affectionate",
+      "Agile",
+      "Loyal"
+    ],
+    "origin": "France",
+    "height": "17.5-20.5 inches",
+    "weight": "30-40 lbs",
+    "lifespan": "12-14 years",
+    "size": "Medium",
+    "coatType": "Medium",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02101556-clumber": {
+    "description": "The Clumber Spaniel is a distinctive, heavy-boned gundog known for its massive head, thoughtful expression, and dense white coat, often with lemon or orange markings. Dignified and gentle, they are powerful yet calm, making them devoted family companions and effective retrievers in dense cover. Despite their size, they are relatively low-energy indoors.",
+    "traits": [
+      "Gentle",
+      "Dignified",
+      "Loyal",
+      "Calm",
+      "Intelligent"
+    ],
+    "origin": "United Kingdom",
+    "height": "17-20 inches",
+    "weight": "55-85 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Medium",
+    "activityLevel": "Low",
+    "rarity": "Very Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02102177-Welsh_springer_spaniel": {
+    "description": "The Welsh Springer Spaniel is a cheerful, affectionate, and energetic dog known for its striking red and white coat. Bred for flushing game, they possess a keen intelligence and an eager-to-please nature. They make wonderful, loyal family companions, thriving on activity and interaction.",
+    "traits": [
+      "Affectionate",
+      "Energetic",
+      "Loyal",
+      "Intelligent",
+      "Playful"
+    ],
+    "origin": "Wales",
+    "height": "17-19 inches",
+    "weight": "35-55 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Medium",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02102318-cocker_spaniel": {
+    "description": "Cheerful, affectionate, and intelligent, the Cocker Spaniel is a beloved family companion known for its beautiful, flowing coat and expressive eyes. Originally bred as a gun dog, they retain a playful spirit and require regular exercise and grooming. Their gentle nature makes them wonderful pets.",
+    "traits": [
+      "Affectionate",
+      "Cheerful",
+      "Playful",
+      "Gentle",
+      "Loyal"
+    ],
+    "origin": "England",
+    "height": "14-16 inches",
+    "weight": "25-30 lbs",
+    "lifespan": "10-14 years",
+    "size": "Small",
+    "coatType": "Long",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02102480-Sussex_spaniel": {
+    "description": "A sturdy, low-slung sporting spaniel, the Sussex Spaniel boasts a rich golden-liver coat and a melancholic expression that belies its cheerful nature. Known for its unique 'Sussex cry,' this devoted companion is an enthusiastic field dog and a calm, affectionate family member, equally happy adventuring outdoors or relaxing at home.",
+    "traits": [
+      "Loyal",
+      "Gentle",
+      "Energetic",
+      "Cheerful",
+      "Affectionate"
+    ],
+    "origin": "England",
+    "height": "13-15 inches",
+    "weight": "35-45 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Medium",
+    "activityLevel": "Medium",
+    "rarity": "Very Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02102973-Irish_water_spaniel": {
+    "description": "The Irish Water Spaniel is a distinctive, intelligent gundog known for its tight, crisp curls and 'rat tail.' Energetic and playful, they excel in water retrieving and dog sports. Loyal to their families, they can be reserved with strangers, making devoted companions for active households who can meet their exercise needs.",
+    "traits": [
+      "Intelligent",
+      "Playful",
+      "Energetic",
+      "Loyal",
+      "Curious"
+    ],
+    "origin": "Ireland",
+    "height": "21-24 inches",
+    "weight": "45-68 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Curly",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02104365-schipperke": {
+    "description": "The Schipperke, a Belgian \"little captain,\" is a small, agile, and fox-like dog originally used on barges for pest control. Known for their mischievous spirit, intelligence, and boundless curiosity, they possess a big dog attitude in a compact body. Their distinctive black double coat and alert nature make them a unique and engaging companion.",
+    "traits": [
+      "Mischievous",
+      "Alert",
+      "Loyal",
+      "Curious",
+      "Confident"
+    ],
+    "origin": "Belgium",
+    "height": "10-13 inches",
+    "weight": "10-16 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02104029-kuvasz": {
+    "description": "The Kuvasz is a majestic Hungarian livestock guardian with a striking white coat. Renowned for its intelligence, independence, and fierce loyalty, this ancient breed requires an experienced owner capable of consistent training and early socialization to manage its strong protective instincts. It's a devoted family protector, often reserved with strangers.",
+    "traits": [
+      "Loyal",
+      "Independent",
+      "Protective",
+      "Intelligent"
+    ],
+    "origin": "Hungary",
+    "height": "26-30 inches",
+    "weight": "70-115 lbs",
+    "lifespan": "10-12 years",
+    "size": "Giant",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02105412-kelpie": {
+    "description": "The Kelpie is an incredibly intelligent and highly energetic Australian herding dog. Known for its boundless stamina and keen problem-solving abilities, this dedicated worker thrives on having a job to do. Ideal for active individuals or families who can provide ample physical and mental stimulation, they make loyal and adaptable companions.",
+    "traits": [
+      "Intelligent",
+      "Energetic",
+      "Loyal",
+      "Agile",
+      "Diligent"
+    ],
+    "origin": "Australia",
+    "height": "17-20 inches",
+    "weight": "29-44 lbs",
+    "lifespan": "10-14 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02105056-groenendael": {
+    "description": "The Groenendael, a striking Belgian Shepherd Dog, is an intelligent and highly active breed known for its majestic black coat and alert demeanor. Originating as a herding dog, it thrives on physical and mental stimulation. Loyal and protective, it makes an excellent companion for active families capable of meeting its exercise needs.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Energetic",
+      "Protective",
+      "Alert"
+    ],
+    "origin": "Belgium",
+    "height": "22-26 inches",
+    "weight": "45-75 lbs",
+    "lifespan": "10-14 years",
+    "size": "Large",
+    "coatType": "Long",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02105505-komondor": {
+    "description": "The Komondor is a majestic Hungarian livestock guardian, famous for its distinctive corded white coat resembling dreadlocks. Beneath its unique exterior lies a courageous, independent, and fiercely protective nature. This devoted sentinel forms a strong bond with its family and property, making it a formidable, yet calm, companion.",
+    "traits": [
+      "Protective",
+      "Loyal",
+      "Independent",
+      "Courageous",
+      "Calm"
+    ],
+    "origin": "Hungary",
+    "height": "25.5-31.5 inches",
+    "weight": "80-130 lbs",
+    "lifespan": "10-12 years",
+    "size": "Giant",
+    "coatType": "Long",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02105162-malinois": {
+    "description": "The Malinois is a highly intelligent, athletic, and intense working dog from Belgium. Renowned for their incredible drive, trainability, and protective instincts, they excel in police, military, and sport roles. These powerful dogs require significant mental and physical engagement to thrive as companions.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Energetic",
+      "Protective",
+      "Driven"
+    ],
+    "origin": "Belgium",
+    "height": "22-26 inches",
+    "weight": "40-80 lbs",
+    "lifespan": "10-14 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02105251-briard": {
+    "description": "The Briard is a courageous and intelligent French herding dog, recognized by its long, shaggy coat and distinctive gaze. Known for loyalty and a strong protective instinct, they make devoted family guardians. Energetic and eager to please, Briards thrive on activity and close companionship, making them excellent partners for active owners.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Brave",
+      "Protective",
+      "Energetic"
+    ],
+    "origin": "France",
+    "height": "22-27 inches",
+    "weight": "60-100 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Long",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02105641-Old_English_sheepdog": {
+    "description": "The Old English Sheepdog is a famously shaggy, sturdy herding dog known for its distinctive bounciness and playful spirit. Beneath their profuse double coat lies a loyal, intelligent, and affectionate companion. They make wonderful family pets, embodying a gentle giant nature, requiring regular grooming and moderate exercise.",
+    "traits": [
+      "Playful",
+      "Loyal",
+      "Gentle",
+      "Intelligent",
+      "Affectionate"
+    ],
+    "origin": "England",
+    "height": "21-25 inches",
+    "weight": "50-100 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02105855-Shetland_sheepdog": {
+    "description": "The Shetland Sheepdog, or Sheltie, is a beautiful, intelligent, and highly trainable herding dog, often described as a miniature Rough Collie. Known for their sweet nature, loyalty, and affectionate companionship, they make wonderful family pets. Shelties thrive on mental and physical activity, excelling in various dog sports.",
+    "traits": [
+      "Intelligent",
+      "Loyal",
+      "Agile",
+      "Gentle",
+      "Energetic"
+    ],
+    "origin": "Scotland",
+    "height": "13-16 inches",
+    "weight": "15-25 lbs",
+    "lifespan": "12-14 years",
+    "size": "Small",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02106030-collie": {
+    "description": "Elegant, intelligent, and devoted, the Collie is a beloved family companion famous for its striking beauty and gentle nature. Known from \"Lassie,\" they excel as herding dogs and loyal protectors, forming strong bonds with their families and thriving on companionship.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Gentle",
+      "Protective",
+      "Affectionate"
+    ],
+    "origin": "Scotland",
+    "height": "22-26 inches",
+    "weight": "50-75 lbs",
+    "lifespan": "10-14 years",
+    "size": "Large",
+    "coatType": "Long",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02106166-Border_collie": {
+    "description": "The Border Collie is an exceptionally intelligent and highly energetic herding dog, renowned for its intense gaze and strong work ethic. They excel in dog sports and require significant mental and physical stimulation. Loyal and agile, Border Collies make devoted companions for active, experienced owners.",
+    "traits": [
+      "Intelligent",
+      "Energetic",
+      "Loyal",
+      "Agile",
+      "Keen"
+    ],
+    "origin": "United Kingdom",
+    "height": "18-22 inches",
+    "weight": "27-45 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02106382-Bouvier_des_Flandres": {
+    "description": "The Bouvier des Flandres is a rugged, powerful herding dog from the Franco-Belgian border. Known for its imposing appearance and scruffy coat, this intelligent and protective breed makes an excellent family guardian. They require firm training and ample exercise, rewarding owners with unwavering loyalty and a gentle spirit towards their loved ones.",
+    "traits": [
+      "Loyal",
+      "Protective",
+      "Intelligent",
+      "Brave",
+      "Steady"
+    ],
+    "origin": "Flanders (Belgium/France)",
+    "height": "22.5-27.5 inches",
+    "weight": "60-110 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Wire",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02106550-Rottweiler": {
+    "description": "The Rottweiler is a powerful, confident, and devoted breed known for its protective instincts and impressive strength. Originally herding cattle, they make loyal family guardians with proper training and socialization. Their intelligent and calm demeanor, combined with a muscular build, makes them both formidable and loving companions.",
+    "traits": [
+      "Loyal",
+      "Confident",
+      "Protective",
+      "Intelligent",
+      "Brave"
+    ],
+    "origin": "Germany",
+    "height": "22-27 inches",
+    "weight": "80-135 lbs",
+    "lifespan": "9-10 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02106662-German_shepherd": {
+    "description": "The German Shepherd is a highly intelligent and versatile breed renowned for its loyalty, courage, and protective instincts. Originating in Germany, these noble dogs excel as family companions, service animals, and working dogs. They require consistent training, early socialization, and significant physical and mental stimulation to thrive, making them ideal for active and experienced owners.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Brave",
+      "Protective",
+      "Confident"
+    ],
+    "origin": "Germany",
+    "height": "22-26 inches",
+    "weight": "50-90 lbs",
+    "lifespan": "10-13 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02107312-miniature_pinscher": {
+    "description": "Often called the \"King of Toys,\" the Miniature Pinscher is a spirited and proud breed known for its distinctive hackney gait and bold personality. Despite its small size, it possesses the heart of a much larger dog, displaying fearlessness, intelligence, and a mischievous streak. They are energetic and require ample exercise and mental stimulation to thrive.",
+    "traits": [
+      "Bold",
+      "Energetic",
+      "Intelligent",
+      "Curious",
+      "Loyal"
+    ],
+    "origin": "Germany",
+    "height": "10-12.5 inches",
+    "weight": "8-11 lbs",
+    "lifespan": "12-16 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02107142-Doberman": {
+    "description": "The Doberman Pinscher is a sleek, powerful, and intelligent working dog. Known for their loyalty and protective nature, they excel in various roles from family companion to police work. They require consistent training and ample exercise to thrive, making them ideal for active owners.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Protective",
+      "Alert",
+      "Energetic"
+    ],
+    "origin": "Germany",
+    "height": "24-28 inches",
+    "weight": "60-100 lbs",
+    "lifespan": "10-13 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02107574-Greater_Swiss_Mountain_dog": {
+    "description": "The Greater Swiss Mountain Dog is a powerful, sturdy, and agile working dog originating from the Swiss Alps. Known for its striking tricolor coat and gentle, loyal, and confident demeanor, it makes an excellent family companion and guardian. They thrive on companionship and enjoy outdoor activities.",
+    "traits": [
+      "Loyal",
+      "Confident",
+      "Gentle",
+      "Dependable",
+      "Alert"
+    ],
+    "origin": "Switzerland",
+    "height": "23.5-28.5 inches",
+    "weight": "85-140 lbs",
+    "lifespan": "8-11 years",
+    "size": "Giant",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02107683-Bernese_mountain_dog": {
+    "description": "The Bernese Mountain Dog is a striking, tricolored working dog from the Swiss Alps. Known for their gentle nature and strong build, they are loyal, affectionate companions. They thrive on human companionship and are renowned for being excellent family pets, offering both warmth and a calm presence.",
+    "traits": [
+      "Loyal",
+      "Gentle",
+      "Affectionate",
+      "Intelligent",
+      "Calm"
+    ],
+    "origin": "Switzerland",
+    "height": "23-27.5 inches",
+    "weight": "70-115 lbs",
+    "lifespan": "7-10 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02107908-Appenzeller": {
+    "description": "The Appenzeller Sennenhund is a vibrant, tricolored Swiss working dog from the Alps. Highly intelligent and agile, they were bred for herding and guarding livestock. Possessing boundless energy and unwavering loyalty, they thrive with active families capable of providing consistent training and ample mental stimulation.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Energetic",
+      "Agile",
+      "Protective"
+    ],
+    "origin": "Switzerland",
+    "height": "19-22 inches",
+    "weight": "45-70 lbs",
+    "lifespan": "12-14 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02108000-EntleBucher": {
+    "description": "The Entlebucher is the smallest of the four Swiss Mountain Dogs, a robust and agile herding breed. Known for its striking tricolor coat and expressive eyes, this intelligent and energetic dog thrives on activity and mental stimulation. They are fiercely loyal and protective of their families, making excellent watchdogs and devoted companions.",
+    "traits": [
+      "Loyal",
+      "Energetic",
+      "Intelligent",
+      "Protective",
+      "Agile"
+    ],
+    "origin": "Switzerland",
+    "height": "16-21 inches",
+    "weight": "45-65 lbs",
+    "lifespan": "11-13 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02108422-bull_mastiff": {
+    "description": "The Bull Mastiff is a powerful, protective, and devoted guardian, originally bred to deter poachers in England. These massive dogs possess a quiet confidence and unwavering loyalty, making them excellent family companions for those who can provide consistent training and socialization. They are known for their calm demeanor and formidable presence.",
+    "traits": [
+      "Protective",
+      "Loyal",
+      "Confident",
+      "Calm",
+      "Devoted"
+    ],
+    "origin": "England",
+    "height": "24-27 inches",
+    "weight": "100-130 lbs",
+    "lifespan": "7-9 years",
+    "size": "Giant",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02108089-boxer": {
+    "description": "Boxers are intelligent, energetic dogs known for their playful nature and strong loyalty. With their muscular build, expressive faces, and boundless enthusiasm, they make devoted family companions. They require regular exercise and thrive on interaction, often acting like perpetual puppies, bringing joy and humor to their homes.",
+    "traits": [
+      "Loyal",
+      "Energetic",
+      "Playful",
+      "Intelligent",
+      "Devoted"
+    ],
+    "origin": "Germany",
+    "height": "21-25 inches",
+    "weight": "50-80 lbs",
+    "lifespan": "10-12 years",
+    "size": "Large",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02108551-Tibetan_mastiff": {
+    "description": "The Tibetan Mastiff is an ancient and majestic guardian of the Himalayas, known for its powerful build and impressive lion-like mane. This formidable breed is incredibly loyal and protective of its family, possessing an independent and reserved nature. They make vigilant protectors, requiring experienced owners due to their size and strong guarding instincts.",
+    "traits": [
+      "Protective",
+      "Loyal",
+      "Independent",
+      "Reserved",
+      "Vigilant"
+    ],
+    "origin": "Tibet",
+    "height": "24-30 inches",
+    "weight": "70-150+ lbs",
+    "lifespan": "10-12 years",
+    "size": "Giant",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02108915-French_bulldog": {
+    "description": "Compact, muscular, and charming, the French Bulldog is known for its distinctive bat ears and amiable disposition. These affectionate companions thrive on human interaction, making them excellent family pets for those seeking a playful yet relatively low-energy canine friend. Their loving nature and unique look have made them incredibly popular.",
+    "traits": [
+      "Affectionate",
+      "Playful",
+      "Charming",
+      "Adaptable",
+      "Loyal"
+    ],
+    "origin": "France",
+    "height": "11-13 inches",
+    "weight": "16-28 lbs",
+    "lifespan": "10-12 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02109047-Great_Dane": {
+    "description": "The Great Dane is a majestic 'Apollo of Dogs,' a true gentle giant known for its elegant build and affectionate, docile nature. Despite their formidable size, they are sweet, devoted companions who thrive on human interaction, making them wonderful family pets when properly trained and socialized.",
+    "traits": [
+      "Gentle",
+      "Affectionate",
+      "Loyal",
+      "Patient",
+      "Friendly"
+    ],
+    "origin": "Germany",
+    "height": "28-32 inches",
+    "weight": "100-175 lbs",
+    "lifespan": "7-10 years",
+    "size": "Giant",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02109525-Saint_Bernard": {
+    "description": "The Saint Bernard is a majestic giant, originally bred for alpine rescue in Switzerland. Renowned for their gentle nature and patient demeanor, these massive dogs make devoted and loving family companions. Despite their imposing size, they are typically calm and good-natured, enjoying a prominent place within the family unit.",
+    "traits": [
+      "Gentle",
+      "Loyal",
+      "Patient",
+      "Friendly",
+      "Calm"
+    ],
+    "origin": "Switzerland",
+    "height": "26-30 inches",
+    "weight": "120-180 lbs",
+    "lifespan": "8-10 years",
+    "size": "Giant",
+    "coatType": "Double",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02109961-Eskimo_dog": {
+    "description": "The Canadian Eskimo Dog, or Qimmiq, is an ancient, powerful Arctic breed designed for extreme cold and demanding work. Developed by Inuit people for hunting and sled pulling, they possess immense stamina, intelligence, and loyalty. These dogs require significant exercise and mental stimulation, thriving in active environments with dedicated companions.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Hardy",
+      "Energetic",
+      "Independent"
+    ],
+    "origin": "Canadian Arctic",
+    "height": "20-27 inches",
+    "weight": "40-85 lbs",
+    "lifespan": "10-15 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Very Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02110063-malamute": {
+    "description": "The Alaskan Malamute is a powerful, dignified Arctic sled dog known for its strength and endurance. Loyal and friendly, they thrive on companionship and require significant exercise to stay happy and well-behaved. Their thick double coat protects them in cold climates, embodying their hardy northern heritage.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Independent",
+      "Playful",
+      "Affectionate"
+    ],
+    "origin": "Alaska",
+    "height": "23-25 inches",
+    "weight": "75-100 lbs",
+    "lifespan": "10-14 years",
+    "size": "Giant",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02110806-basenji": {
+    "description": "The \"barkless dog\" of Africa, the Basenji is an ancient hound known for its unique yodel-like sound. Alert, intelligent, and independent, they possess a cat-like demeanor, often grooming themselves. They are agile and curious, requiring consistent training and mental stimulation to thrive.",
+    "traits": [
+      "Independent",
+      "Alert",
+      "Intelligent",
+      "Curious",
+      "Playful"
+    ],
+    "origin": "Central Africa",
+    "height": "16-17 inches",
+    "weight": "22-24 lbs",
+    "lifespan": "10-14 years",
+    "size": "Medium",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02110627-affenpinscher": {
+    "description": "The Affenpinscher, often called the \"monkey dog,\" is a charming and spirited toy breed from Germany. Known for its distinct, expressive face and wiry coat, this sturdy little dog is curious, mischievous, and fiercely loyal to its family, making it an entertaining and loving companion.",
+    "traits": [
+      "Playful",
+      "Curious",
+      "Bold",
+      "Loyal",
+      "Mischievous"
+    ],
+    "origin": "Germany",
+    "height": "9.5-11.5 inches",
+    "weight": "7-10 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Wire",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02110185-Siberian_husky": {
+    "description": "Siberian Huskies are striking, athletic sled dogs from Siberia, known for their endurance, independent spirit, and beautiful double coats. Intelligent, playful, and affectionate, these vocal dogs require significant exercise and mental stimulation. They thrive in active households, offering boundless energy and loyal companionship.",
+    "traits": [
+      "Energetic",
+      "Intelligent",
+      "Independent",
+      "Playful",
+      "Affectionate"
+    ],
+    "origin": "Siberia",
+    "height": "20-23.5 inches",
+    "weight": "35-60 lbs",
+    "lifespan": "12-14 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02111129-Leonberg": {
+    "description": "The majestic Leonberger is a gentle giant originating from Germany, bred to resemble a lion. Known for its calm temperament and loving nature, this powerful yet graceful dog makes an excellent family companion. Its thick, water-resistant coat and amiable disposition define this impressive breed.",
+    "traits": [
+      "Gentle",
+      "Loyal",
+      "Intelligent",
+      "Calm",
+      "Affectionate"
+    ],
+    "origin": "Germany",
+    "height": "25.5-31.5 inches",
+    "weight": "90-170 lbs",
+    "lifespan": "7-10 years",
+    "size": "Giant",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02110958-pug": {
+    "description": "Pugs are charming, compact dogs known for their wrinkled faces and playful, loving personalities. Originally bred as companions, they thrive on human interaction and make excellent lapdogs, bringing joy and laughter to any home with their comical antics and devoted nature.",
+    "traits": [
+      "Playful",
+      "Affectionate",
+      "Charming",
+      "Loyal",
+      "Mischievous"
+    ],
+    "origin": "China",
+    "height": "10-13 inches",
+    "weight": "14-18 lbs",
+    "lifespan": "13-15 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02111277-Newfoundland": {
+    "description": "The Newfoundland is a giant, gentle, and noble dog breed renowned for its sweet temperament and historical role in water rescue. Affectionately known as \"Newfies,\" they are devoted family companions, excellent with children, and possess a strong swimming instinct and a magnificent, thick coat built for cold waters.",
+    "traits": [
+      "Gentle",
+      "Loyal",
+      "Patient",
+      "Brave",
+      "Calm"
+    ],
+    "origin": "Newfoundland, Canada",
+    "height": "26-28 inches",
+    "weight": "100-150 lbs",
+    "lifespan": "9-10 years",
+    "size": "Giant",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02111500-Great_Pyrenees": {
+    "description": "Majestic, gentle giants, Great Pyrenees are renowned for their protective yet calm demeanor. Bred as livestock guardians, they possess a keen intelligence and a deep loyalty to their families. Their imposing presence belies a loving nature, making them excellent, watchful companions.",
+    "traits": [
+      "Loyal",
+      "Gentle",
+      "Protective",
+      "Calm",
+      "Independent"
+    ],
+    "origin": "Pyrenees Mountains",
+    "height": "25-32 inches",
+    "weight": "85-160 lbs",
+    "lifespan": "10-12 years",
+    "size": "Giant",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02111889-Samoyed": {
+    "description": "The Samoyed is a beautiful, smiling, fluffy dog from Siberia, originally bred for herding reindeer and pulling sleds. Known for their striking white double coat and happy expression, they are friendly, gentle, and intelligent companions. Samoyeds thrive on human companionship, making wonderful family pets, but require significant grooming and regular exercise.",
+    "traits": [
+      "Friendly",
+      "Gentle",
+      "Intelligent",
+      "Playful",
+      "Affectionate"
+    ],
+    "origin": "Siberia",
+    "height": "19-24 inches",
+    "weight": "35-65 lbs",
+    "lifespan": "12-14 years",
+    "size": "Large",
+    "coatType": "Double",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02112018-Pomeranian": {
+    "description": "The Pomeranian is a vivacious and intelligent toy dog known for its luxuriant double coat and cheerful disposition. Despite its tiny size, it possesses a bold, 'big dog' personality, often acting as a confident watch dog. Highly energetic and curious, Poms make devoted companions, thriving on attention and interactive play.",
+    "traits": [
+      "Bold",
+      "Lively",
+      "Intelligent",
+      "Curious",
+      "Devoted"
+    ],
+    "origin": "Pomerania (Germany/Poland)",
+    "height": "6-7 inches",
+    "weight": "3-7 lbs",
+    "lifespan": "12-16 years",
+    "size": "Small",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02112137-chow": {
+    "description": "The Chow Chow is an ancient, dignified breed known for its lion-like mane, unique blue-black tongue, and profound independence. Originating from China, these powerful dogs are loyal and devoted to their families but are often reserved and aloof with strangers. They thrive with consistent training and early socialization.",
+    "traits": [
+      "Dignified",
+      "Reserved",
+      "Loyal",
+      "Independent",
+      "Aloof"
+    ],
+    "origin": "China",
+    "height": "17-20 inches",
+    "weight": "45-70 lbs",
+    "lifespan": "9-12 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "Low",
+    "rarity": "Common",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02112350-keeshond": {
+    "description": "The Keeshond is a cheerful, intelligent, and highly affectionate 'Dutch Barge Dog,' known for its distinctive fox-like face and \"spectacles.\" This fluffy, medium-sized companion thrives on human interaction, making them excellent family pets and alert watchdogs eager to please. They are lively and charming, bringing joy to any home.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Affectionate",
+      "Playful",
+      "Alert"
+    ],
+    "origin": "Netherlands",
+    "height": "17-18 inches",
+    "weight": "35-45 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02112706-Brabancon_griffon": {
+    "description": "The Brabancon Griffon, or Petit Brabancon, is a charming and lively companion dog from Belgium. Known for its smooth coat and expressive face, this breed is affectionate, curious, and intelligent. They thrive on human companionship, making devoted family pets with a playful spirit that belies their small stature.",
+    "traits": [
+      "Affectionate",
+      "Playful",
+      "Alert",
+      "Loyal",
+      "Curious"
+    ],
+    "origin": "Belgium",
+    "height": "7-10 inches",
+    "weight": "8-12 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02115913-dhole": {
+    "description": "The Dhole, or Asiatic wild dog, is a highly social and intelligent canid native to South and Southeast Asia. These cooperative pack hunters employ sophisticated strategies for taking down prey. With a distinctive reddish-brown coat, they are agile and wild animals, not domesticated pets, playing a vital role in their ecosystems.",
+    "traits": [
+      "Social",
+      "Cooperative",
+      "Intelligent",
+      "Agile",
+      "Communicative"
+    ],
+    "origin": "South and Southeast Asia",
+    "height": "17-22 inches",
+    "weight": "26-46 lbs",
+    "lifespan": "8-12 years",
+    "size": "Medium",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Very Rare",
+    "goodWithKids": "No"
+  },
+  "n02113023-Pembroke": {
+    "description": "Pembroke Welsh Corgis are intelligent, robust herding dogs known for their distinctive short legs and foxy faces. Loyal and affectionate, they make excellent companions for families, bringing joy with their playful antics and surprisingly big personalities in a small package.",
+    "traits": [
+      "Loyal",
+      "Intelligent",
+      "Playful",
+      "Affectionate",
+      "Bold"
+    ],
+    "origin": "Wales, United Kingdom",
+    "height": "10-12 inches",
+    "weight": "25-30 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02113186-Cardigan": {
+    "description": "The Cardigan Welsh Corgi is an ancient, hardy herding dog, identifiable by its distinctive long, foxy tail. Known for their intelligence, loyalty, and playful spirit, they make affectionate and vigilant family companions. Despite their small stature, they possess a big-dog personality and require moderate exercise to stay happy.",
+    "traits": [
+      "Intelligent",
+      "Loyal",
+      "Playful",
+      "Devoted",
+      "Watchful"
+    ],
+    "origin": "Wales",
+    "height": "10.5-12.5 inches",
+    "weight": "25-38 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Double",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Yes"
+  },
+  "n02113624-toy_poodle": {
+    "description": "The Toy Poodle is an elegant, intelligent, and affectionate companion. Despite their small size, they boast a big personality, excelling in obedience and agility. Their distinctive, low-shedding curly coat makes them a popular choice for families seeking a charming and active miniature friend.",
+    "traits": [
+      "Intelligent",
+      "Playful",
+      "Affectionate",
+      "Alert",
+      "Agile"
+    ],
+    "origin": "Germany",
+    "height": "Under 10 inches",
+    "weight": "4-6 lbs",
+    "lifespan": "12-15 years",
+    "size": "Small",
+    "coatType": "Curly",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02113712-miniature_poodle": {
+    "description": "Elegant, intelligent, and lively, the Miniature Poodle is a captivating companion. Renowned for their distinctive curly coat and graceful demeanor, they are highly trainable and excel in various dog sports. Despite their refined appearance, they possess a playful spirit and deeply bond with their families, making them wonderful pets.",
+    "traits": [
+      "Intelligent",
+      "Agile",
+      "Playful",
+      "Loyal",
+      "Alert"
+    ],
+    "origin": "Germany",
+    "height": "10-15 inches",
+    "weight": "10-15 lbs",
+    "lifespan": "12-15 years",
+    "size": "Medium",
+    "coatType": "Curly",
+    "activityLevel": "Medium",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02113799-standard_poodle": {
+    "description": "Elegant, highly intelligent, and athletic, the Standard Poodle is far more than just a show dog. Known for its sophisticated curly coat and keen mind, it excels in various dog sports and makes a loyal, playful family companion. They require regular mental and physical stimulation to thrive.",
+    "traits": [
+      "Intelligent",
+      "Loyal",
+      "Energetic",
+      "Agile",
+      "Playful"
+    ],
+    "origin": "Germany",
+    "height": "22-27 inches",
+    "weight": "45-75 lbs",
+    "lifespan": "10-14 years",
+    "size": "Large",
+    "coatType": "Curly",
+    "activityLevel": "High",
+    "rarity": "Common",
+    "goodWithKids": "Yes"
+  },
+  "n02113978-Mexican_hairless": {
+    "description": "The ancient Mexican Hairless, or Xoloitzcuintli, is a captivating breed with a history spanning millennia. Known for its distinct hairless skin, this elegant dog is calm, alert, and fiercely loyal to its family. A national treasure, the Xolo makes a devoted and engaging companion, often exhibiting a serene demeanor.",
+    "traits": [
+      "Loyal",
+      "Calm",
+      "Alert",
+      "Intelligent",
+      "Devoted"
+    ],
+    "origin": "Mexico",
+    "height": "10-23 inches",
+    "weight": "10-55 lbs",
+    "lifespan": "13-18 years",
+    "size": "Medium",
+    "coatType": "Short",
+    "activityLevel": "Medium",
+    "rarity": "Rare",
+    "goodWithKids": "Supervision Required"
+  },
+  "n02115641-dingo": {
+    "description": "The Dingo is Australia's native wild dog, an ancient and highly adaptable canid. Known for its intelligence and resilience, it typically lives a solitary or pack-based existence in diverse habitats. While possessing physical similarities to domestic dogs, Dingoes are wild animals with distinct primitive traits and instincts, generally not suited for domestication.",
+    "traits": [
+      "Wild",
+      "Intelligent",
+      "Independent",
+      "Adaptable",
+      "Elusive"
+    ],
+    "origin": "Australia",
+    "height": "19-26 inches",
+    "weight": "30-45 lbs",
+    "lifespan": "10-15 years",
+    "size": "Medium",
+    "coatType": "Short",
+    "activityLevel": "High",
+    "rarity": "Very Rare",
+    "goodWithKids": "No"
+  }
+}

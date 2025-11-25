@@ -236,11 +236,11 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
       <div 
         onDragOver={handleDragOver}
         onDrop={handleDrop}
-        className={`relative flex items-center w-full h-16 md:h-20 rounded-full bg-white shadow-2xl transition-all duration-300 border-2 ${isTyping || showSuggestions ? 'border-indigo-500 ring-4 ring-indigo-500/20 shadow-indigo-500/30' : 'border-transparent hover:border-indigo-200 hover:shadow-indigo-500/10'}`}
+        className={`relative flex items-center w-full h-16 md:h-20 rounded-full bg-white dark:bg-slate-800 shadow-2xl transition-all duration-300 border-2 ${isTyping || showSuggestions ? 'border-indigo-500 ring-4 ring-indigo-500/20 shadow-indigo-500/30' : 'border-transparent hover:border-indigo-200 dark:hover:border-indigo-500/30 hover:shadow-indigo-500/10'}`}
       >
         
         {/* Search Icon */}
-        <div className="pl-6 md:pl-8 text-slate-400">
+        <div className="pl-6 md:pl-8 text-slate-400 dark:text-slate-500">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
@@ -253,7 +253,7 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
           value={query}
           onChange={handleInputChange}
           onFocus={() => query.length > 0 && setShowSuggestions(true)}
-          className="w-full h-full px-4 md:px-6 text-xl md:text-2xl text-slate-800 bg-transparent border-none outline-none placeholder-slate-400 font-medium"
+          className="w-full h-full px-4 md:px-6 text-xl md:text-2xl text-slate-800 dark:text-slate-100 bg-transparent border-none outline-none placeholder-slate-400 dark:placeholder-slate-500 font-medium"
           placeholder={`Search for ${placeholder}`}
           disabled={isLoading}
         />
@@ -271,7 +271,7 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
           {/* Image Search Button (Unified) */}
           <button
             onClick={() => setShowImageSearch(true)}
-            className="h-12 w-12 md:h-14 md:w-14 flex items-center justify-center rounded-full text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-300"
+            className="h-12 w-12 md:h-14 md:w-14 flex items-center justify-center rounded-full text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-all duration-300"
             title="Search by image"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -287,7 +287,7 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
               className={`h-12 w-12 md:h-14 md:w-14 flex items-center justify-center rounded-full transition-all duration-300 ${
                 isListening 
                   ? 'bg-red-500 text-white shadow-lg shadow-red-500/40 scale-110 animate-pulse' 
-                  : 'text-slate-400 hover:text-indigo-600 hover:bg-indigo-50'
+                  : 'text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/30'
               }`}
               title={isListening ? "Stop listening" : "Search by voice"}
             >
@@ -305,14 +305,14 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
 
       {/* Suggestions Dropdown */}
       {showSuggestions && suggestions.length > 0 && (
-        <div ref={suggestionsRef} className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 max-h-80 overflow-y-auto z-[100]">
+        <div ref={suggestionsRef} className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden border border-slate-100 dark:border-slate-700 max-h-80 overflow-y-auto z-[100]">
           {suggestions.map((breed, index) => (
             <div
               key={index}
               onClick={() => handleSelect(breed)}
-              className="px-4 py-3 hover:bg-indigo-50 cursor-pointer flex items-center gap-4 transition-colors text-slate-700 border-b border-slate-50 last:border-none"
+              className="px-4 py-3 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 cursor-pointer flex items-center gap-4 transition-colors text-slate-700 dark:text-slate-200 border-b border-slate-50 dark:border-slate-700/50 last:border-none"
             >
-              <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-slate-100 border border-slate-200">
+              <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={`/breeds/${breed.id}/1.jpg`} 
@@ -331,7 +331,7 @@ export default function BreedSearchBar({ onSelectBreed, onImageSelect, isLoading
 
       {/* Voice Error Message */}
       {voiceError && (
-        <div className="absolute top-full left-0 right-0 mt-2 p-3 bg-red-50 border border-red-100 text-red-600 rounded-xl text-sm text-center animate-fade-in">
+        <div className="absolute top-full left-0 right-0 mt-2 p-3 bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800/50 text-red-600 dark:text-red-300 rounded-xl text-sm text-center animate-fade-in">
           {voiceError}
         </div>
       )}

@@ -23,6 +23,7 @@ export function getBreedNameFromLabel(labelNumber: number): string | null {
     .join(' ');
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function getBreedInfo(breedName: string): Promise<any> {
   try {
     // First check if breed info is cached
@@ -54,6 +55,7 @@ export async function getBreedInfo(breedName: string): Promise<any> {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function fetchBreedInfoFromGemini(breedName: string): Promise<any> {
   try {
     console.log('🤖 Calling backend API for breed info:', breedName);
@@ -79,6 +81,7 @@ async function fetchBreedInfoFromGemini(breedName: string): Promise<any> {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function cacheBreedInfo(breedName: string, breedInfo: any): Promise<void> {
   try {
     const record = {

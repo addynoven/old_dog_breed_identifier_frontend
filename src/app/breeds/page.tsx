@@ -4,13 +4,38 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
+import MultiSelect from '../../components/MultiSelect';
 import labels from '../../../public/labels.json';
 import locations from '../../../public/location.json';
+import breedData from '../../../public/breed-data.json';
 
 // Parse breeds from labels.json
-const allBreeds = Object.values(labels).map((label: string) => {
-  const parts = label.split('-');
-  if (parts.length < 2) return { name: label, id: label, country: 'Unknown' };
+interface Breed {
+  name: string;
+  id: string;
+  country: string;
+  size: string;
+  coatType: string;
+  activityLevel: string;
+  rarity: string;
+  goodWithKids: string;
+  traits: string[];
+}
+
+const allBreeds: Breed[] = Object.values(labels).map((label: unknown) => {
+  const labelStr = label as string;
+  const parts = labelStr.split('-');
+  if (parts.length < 2) return { 
+    name: labelStr, 
+    id: labelStr, 
+    country: 'Unknown',
+    size: 'Unknown',
+    coatType: 'Unknown',
+    activityLevel: 'Unknown',
+    rarity: 'Unknown',
+    goodWithKids: 'Unknown',
+    traits: []
+  };
   
   const name = parts.slice(1).join('-').replace(/_/g, ' ')
     .split(' ')
@@ -31,40 +56,78 @@ const allBreeds = Object.values(labels).map((label: string) => {
      }
   }
 
-  return { name, id: label, country };
+  // Get additional data from breed-data.json
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const data = (breedData as any)[labelStr];
+
+  return { 
+    name, 
+    id: labelStr, 
+    country,
+    size: data?.size || 'Unknown',
+    coatType: data?.coatType || 'Unknown',
+    activityLevel: data?.activityLevel || 'Unknown',
+    rarity: data?.rarity || 'Unknown',
+    goodWithKids: data?.goodWithKids || 'Unknown',
+    traits: data?.traits || []
+  };
 }).sort((a, b) => a.name.localeCompare(b.name));
 
 // Get unique countries for filter
-const countries = Array.from(new Set(allBreeds.map(b => b.country))).sort();
+// Get unique values for filters
+const countries = Array.from(new Set(allBreeds.map(b => b.country).filter(c => c !== 'Unknown'))).sort();
+const sizes = ['Small', 'Medium', 'Large', 'Giant'];
+const coatTypes = ['Short', 'Medium', 'Long', 'Double', 'Curly', 'Wire'];
+const activityLevels = ['Low', 'Medium', 'High'];
+const rarities = ['Common', 'Rare', 'Very Rare'];
+const goodWithKidsOptions = ['Yes', 'No', 'Supervision Required'];
+// Extract unique traits
+const allTraits = Array.from(new Set(allBreeds.flatMap(b => b.traits))).sort();
 
 export default function Breeds() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCountry, setSelectedCountry] = useState('');
+  const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
+  const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
+  const [selectedCoats, setSelectedCoats] = useState<string[]>([]);
+  const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
+  const [selectedRarities, setSelectedRarities] = useState<string[]>([]);
+  const [selectedKids, setSelectedKids] = useState<string[]>([]);
+  const [selectedTraits, setSelectedTraits] = useState<string[]>([]);
 
   const filteredBreeds = useMemo(() => {
     return allBreeds.filter(breed => {
       const matchesSearch = breed.name.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCountry = selectedCountry ? breed.country === selectedCountry : true;
-      return matchesSearch && matchesCountry;
+      const matchesCountry = selectedCountries.length === 0 || selectedCountries.includes(breed.country);
+      const matchesSize = selectedSizes.length === 0 || selectedSizes.includes(breed.size);
+      const matchesCoat = selectedCoats.length === 0 || selectedCoats.includes(breed.coatType);
+      const matchesActivity = selectedActivities.length === 0 || selectedActivities.includes(breed.activityLevel);
+      const matchesRarity = selectedRarities.length === 0 || selectedRarities.includes(breed.rarity);
+      const matchesKids = selectedKids.length === 0 || selectedKids.includes(breed.goodWithKids);
+      // For traits, we use AND logic (must have all selected traits)
+      const matchesTrait = selectedTraits.length === 0 || selectedTraits.every(t => breed.traits.includes(t));
+
+      return matchesSearch && matchesCountry && matchesSize && matchesCoat && matchesActivity && matchesRarity && matchesKids && matchesTrait;
     });
-  }, [searchTerm, selectedCountry]);
+  }, [searchTerm, selectedCountries, selectedSizes, selectedCoats, selectedActivities, selectedRarities, selectedKids, selectedTraits]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       <Header />
       <main className="flex-1 container mx-auto px-4 py-12 pb-32 mt-20">
         <div className="text-center mb-12 animate-fade-in-up">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Explore <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Dog Breeds</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
+            Explore <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Dog Breeds</span>
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
-            Discover over 120 breeds from around the world. Filter by country or search to find your favorite.
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-light">
+            Discover over 120 breeds from around the world. Filter by country, traits, or search to find your favorite.
           </p>
         </div>
 
         {/* Filters */}
-        <div className="max-w-4xl mx-auto mb-12 space-y-4 md:space-y-0 md:flex gap-4 animate-fade-in-up animation-delay-200">
-          <div className="relative flex-1">
+        {/* Filters */}
+        <div className="max-w-7xl mx-auto mb-12 animate-fade-in-up animation-delay-200">
+          {/* Search Bar */}
+          <div className="relative mb-6">
             <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -75,30 +138,54 @@ export default function Breeds() {
               placeholder="Search breeds..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-lg text-slate-800 placeholder-slate-400 bg-white"
+              className="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-lg text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 bg-white dark:bg-slate-800"
             />
           </div>
-          <div className="relative md:w-1/3">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <select
-              value={selectedCountry}
-              onChange={(e) => setSelectedCountry(e.target.value)}
-              className="w-full pl-12 pr-8 py-4 rounded-2xl border border-slate-200 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all appearance-none bg-white text-lg cursor-pointer text-slate-800"
-            >
-              <option value="" className="text-slate-500">All Countries</option>
-              {countries.map(country => (
-                <option key={country} value={country} className="text-slate-800">{country}</option>
-              ))}
-            </select>
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </span>
+
+          {/* Filter Grid */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <MultiSelect
+              label="Countries"
+              options={countries}
+              value={selectedCountries}
+              onChange={setSelectedCountries}
+            />
+            <MultiSelect
+              label="Sizes"
+              options={sizes}
+              value={selectedSizes}
+              onChange={setSelectedSizes}
+            />
+            <MultiSelect
+              label="Coats"
+              options={coatTypes}
+              value={selectedCoats}
+              onChange={setSelectedCoats}
+            />
+            <MultiSelect
+              label="Activity"
+              options={activityLevels}
+              value={selectedActivities}
+              onChange={setSelectedActivities}
+            />
+            <MultiSelect
+              label="Rarity"
+              options={rarities}
+              value={selectedRarities}
+              onChange={setSelectedRarities}
+            />
+            <MultiSelect
+              label="Good with Kids"
+              options={goodWithKidsOptions}
+              value={selectedKids}
+              onChange={setSelectedKids}
+            />
+            <MultiSelect
+              label="Traits"
+              options={allTraits}
+              value={selectedTraits}
+              onChange={setSelectedTraits}
+            />
           </div>
         </div>
 
@@ -109,9 +196,9 @@ export default function Breeds() {
               <Link 
                 href={`/?breed=${encodeURIComponent(breed.name)}`}
                 key={breed.id}
-                className="group bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 overflow-hidden border border-slate-100 hover:border-indigo-200 hover:-translate-y-1 flex flex-col"
+                className="group bg-white dark:bg-slate-800 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 overflow-hidden border border-slate-100 dark:border-slate-700 hover:border-indigo-200 dark:hover:border-indigo-500/50 hover:-translate-y-1 flex flex-col"
               >
-                <div className="aspect-square relative overflow-hidden bg-slate-100">
+                <div className="aspect-square relative overflow-hidden bg-slate-100 dark:bg-slate-700">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
                     src={`/breeds/${breed.id}/1.jpg`}
@@ -128,10 +215,10 @@ export default function Breeds() {
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-bold text-slate-800 text-lg group-hover:text-indigo-600 transition-colors truncate" title={breed.name}>
+                    <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors truncate" title={breed.name}>
                       {breed.name}
                     </h3>
-                    <div className="flex items-center gap-1 mt-1 text-xs font-medium text-slate-500">
+                    <div className="flex items-center gap-1 mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
                       <span>📍</span>
                       <span className="truncate">{breed.country}</span>
                     </div>
@@ -143,11 +230,20 @@ export default function Breeds() {
         ) : (
           <div className="text-center py-20 animate-fade-in">
             <div className="text-6xl mb-4">🐕</div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">No breeds found</h3>
-            <p className="text-slate-500">Try adjusting your search or filters</p>
+            <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-2">No breeds found</h3>
+            <p className="text-slate-500 dark:text-slate-400">Try adjusting your search or filters</p>
             <button 
-              onClick={() => {setSearchTerm(''); setSelectedCountry('');}}
-              className="mt-6 px-6 py-2 bg-indigo-50 text-indigo-600 rounded-full font-medium hover:bg-indigo-100 transition-colors"
+              onClick={() => {
+                setSearchTerm(''); 
+                setSelectedCountries([]);
+                setSelectedSizes([]);
+                setSelectedCoats([]);
+                setSelectedActivities([]);
+                setSelectedRarities([]);
+                setSelectedKids([]);
+                setSelectedTraits([]);
+              }}
+              className="mt-6 px-6 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-full font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
             >
               Clear Filters
             </button>

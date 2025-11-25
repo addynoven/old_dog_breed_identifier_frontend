@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import breedData from '../../../../public/breed-data.json';
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,76 +9,43 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Breed name is required' }, { status: 400 });
     }
 
-    const prompt = `Provide a detailed summary for the ${breedName} dog breed in strict JSON format. 
-    The JSON object must have the following keys:
-    - "description": A short, engaging summary (about 50 words).
-    - "traits": An array of 3-5 single-word personality traits (e.g., "Loyal", "Smart").
-    - "origin": The country or region of origin.
-    - "height": Height range (e.g., "22-26 inches").
-    - "weight": Weight range (e.g., "50-90 lbs").
-    - "lifespan": Life expectancy (e.g., "10-12 years").
-    - "coatType": Short description of coat (e.g., "Double coat, medium length").
-    - "activityLevel": One of "Low", "Medium", "High".
-    - "rarity": "Common", "Rare", or "Very Rare".
-    - "goodWithKids": "Yes", "No", or "Supervision Required".
-
-    Do not include any markdown formatting (like \`\`\`json), just the raw JSON object.`;
-
-    const payload = {
-      contents: [{ 
-        parts: [{ text: prompt }] 
-      }]
-    };
-
-    const apiKey = process.env.GEMINI_API_KEY;
-    const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent', {
-      method: 'POST',
-      headers: { 
-        'x-goog-api-key': apiKey!,
-        'Content-Type': 'application/json' 
-      },
-      body: JSON.stringify(payload)
+    // Find the breed in the local data
+    // The keys in breed-data.json are like "n02085620-Chihuahua"
+    // The breedName from the request is like "Chihuahua" or "German Shepherd"
+    
+    const entries = Object.entries(breedData);
+    const match = entries.find(([key]) => {
+      // Check if the key ends with the breed name (handling spaces/underscores if needed)
+      // The keys usually have underscores for spaces, e.g. "German_Shepherd"
+      const normalizedKey = key.toLowerCase().replace(/_/g, ' ');
+      const normalizedQuery = breedName.toLowerCase();
+      return normalizedKey.includes(normalizedQuery);
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error(`Gemini API Error: ${response.status} ${response.statusText}`, errorText);
-      return NextResponse.json({ error: `Failed to get breed info: ${response.status} ${response.statusText}` }, { status: 500 });
-    }
-
-    const result = await response.json();
-    
-    if (result.candidates && result.candidates[0]?.content?.parts[0]?.text) {
-      const text = result.candidates[0].content.parts[0].text;
-      // Clean up potential markdown code blocks if Gemini adds them despite instructions
-      const jsonString = text.replace(/```json\n?|\n?```/g, '').trim();
-      
-      try {
-        const breedInfo = JSON.parse(jsonString);
-        return NextResponse.json({ breedInfo });
-      } catch (e) {
-        console.error('Failed to parse Gemini JSON:', e);
-        // Fallback to text if parsing fails, wrapping it in a basic object structure
-        return NextResponse.json({ 
-          breedInfo: {
-            description: text,
-            traits: [],
-            origin: 'Unknown',
-            height: 'Unknown',
-            weight: 'Unknown',
-            lifespan: 'Unknown',
-            coatType: 'Unknown',
-            activityLevel: 'Unknown',
-            rarity: 'Unknown',
-            goodWithKids: 'Unknown'
-          } 
-        });
-      }
+    if (match) {
+      const [, data] = match;
+      return NextResponse.json({ breedInfo: data });
     } else {
-      return NextResponse.json({ error: 'Invalid response from Gemini' }, { status: 500 });
+      console.warn(`Breed not found in local data: ${breedName}`);
+      // Fallback or return 404
+      return NextResponse.json({ 
+        breedInfo: {
+          description: `Information for ${breedName} is currently unavailable.`,
+          traits: [],
+          origin: 'Unknown',
+          height: 'Unknown',
+          weight: 'Unknown',
+          lifespan: 'Unknown',
+          coatType: 'Unknown',
+          activityLevel: 'Unknown',
+          rarity: 'Unknown',
+          goodWithKids: 'Unknown'
+        } 
+      });
     }
 
-  } catch {
+  } catch (error) {
+    console.error('Error in breed-info API:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
