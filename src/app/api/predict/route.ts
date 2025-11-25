@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getApiUrl } from '../../../utils/api';
 import { getBreedNameFromLabel } from '../../../lib/breed-utils';
 import { closureCache } from '../../../lib/closure-cache';
+import { getCache, setCache } from '../../../lib/valkey-operations';
 
 // Helper to get the base URL for internal API calls
 function getBaseUrl() {
@@ -35,34 +36,27 @@ export async function POST(request: NextRequest) {
     console.log('❌ Closure cache MISS, trying Redis/Valkey for:', fileHash);
 
     // Check Redis cache
-    const cacheResponse = await fetch(`${getBaseUrl()}/api/valkey/get-record`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ shortId: fileHash })
-    });
+    const cacheData = await getCache(`file:${fileHash}`);
 
-    if (cacheResponse.ok) {
-      const cacheData = await cacheResponse.json();
-      if (cacheData.record && typeof cacheData.record === 'number') {
-        const breedName = getBreedNameFromLabel(cacheData.record);
-        const prediction = { 
-          label_number: cacheData.record,
-          breed_name: breedName,
-          cached: 'valkey' 
-        };
-        
-        // Get breed info and cache in closure
-        const breedInfoResponse = await fetch(`${getBaseUrl()}/api/breed-info`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ breedName })
-        });
-        
-        const breedInfo = breedInfoResponse.ok ? (await breedInfoResponse.json()).breedInfo : '';
-        closureCache.set(fileHash, prediction, breedInfo);
-        
-        return NextResponse.json({ ...prediction, breed_info: breedInfo });
-      }
+    if (cacheData && typeof cacheData === 'number') {
+      const breedName = getBreedNameFromLabel(cacheData);
+      const prediction = { 
+        label_number: cacheData,
+        breed_name: breedName,
+        cached: 'valkey' 
+      };
+      
+      // Get breed info and cache in closure
+      const breedInfoResponse = await fetch(`${getBaseUrl()}/api/breed-info`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ breedName })
+      });
+      
+      const breedInfo = breedInfoResponse.ok ? (await breedInfoResponse.json()).breedInfo : '';
+      closureCache.set(fileHash, prediction, breedInfo);
+      
+      return NextResponse.json({ ...prediction, breed_info: breedInfo });
     }
 
     // Call FastAPI backend
@@ -102,11 +96,8 @@ export async function POST(request: NextRequest) {
     const breedInfo = breedInfoResponse.ok ? (await breedInfoResponse.json()).breedInfo : '';
 
     // Cache in both Valkey and closure
-    await fetch(`${getBaseUrl()}/api/valkey/set-record`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ shortId: fileHash, data: labelNumber })
-    });
+    // Store just the label number to match what we expect in getCache
+    await setCache(`file:${fileHash}`, labelNumber, 86400); // 24 hours TTL
 
     const prediction = { 
       label_number: labelNumber,

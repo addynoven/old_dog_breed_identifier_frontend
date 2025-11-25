@@ -125,3 +125,51 @@ export async function deleteFileRecord(shortId: string): Promise<void> {
     }
   }
 }
+
+export async function setCache(key: string, data: any, ttlSeconds?: number): Promise<void> {
+  const client = await createValkeyClient();
+  
+  try {
+    const setPromise = client.set(key, JSON.stringify(data));
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("Set cache operation timeout")), 5000)
+    );
+    
+    await Promise.race([setPromise, timeoutPromise]);
+    
+    if (ttlSeconds) {
+      await client.expire(key, ttlSeconds);
+    }
+    
+    console.log(`📝 Set cache for key: ${key}`);
+  } finally {
+    if (client.isOpen) {
+      await client.quit();
+    }
+  }
+}
+
+export async function getCache(key: string): Promise<any | null> {
+  const client = await createValkeyClient();
+  
+  try {
+    const getPromise = client.get(key);
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("Get cache operation timeout")), 5000)
+    );
+    
+    const data = await Promise.race([getPromise, timeoutPromise]);
+    
+    if (!data || typeof data !== 'string') {
+      console.log(`❌ Cache miss for key: ${key}`);
+      return null;
+    }
+    
+    console.log(`✅ Cache hit for key: ${key}`);
+    return JSON.parse(data);
+  } finally {
+    if (client.isOpen) {
+      await client.quit();
+    }
+  }
+}
