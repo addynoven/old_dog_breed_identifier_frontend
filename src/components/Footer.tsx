@@ -70,7 +70,7 @@ export default function Footer() {
           <div className="flex items-center gap-1 text-xs text-slate-400">
             <span>Made with</span>
             <span className="text-red-500 animate-pulse">❤️</span>
-            <span>using Next.js & AI</span>
+            <span>using Next.js & dogs 🐕</span>
           </div>
         </div>
       </div>
