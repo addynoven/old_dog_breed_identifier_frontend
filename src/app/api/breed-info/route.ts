@@ -40,7 +40,9 @@ export async function POST(request: NextRequest) {
     });
 
     if (!response.ok) {
-      return NextResponse.json({ error: 'Failed to get breed info' }, { status: 500 });
+      const errorText = await response.text();
+      console.error(`Gemini API Error: ${response.status} ${response.statusText}`, errorText);
+      return NextResponse.json({ error: `Failed to get breed info: ${response.status} ${response.statusText}` }, { status: 500 });
     }
 
     const result = await response.json();

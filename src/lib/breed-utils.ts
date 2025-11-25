@@ -23,7 +23,7 @@ export function getBreedNameFromLabel(labelNumber: number): string | null {
     .join(' ');
 }
 
-export async function getBreedInfo(breedName: string): Promise<string> {
+export async function getBreedInfo(breedName: string): Promise<any> {
   try {
     // First check if breed info is cached
     const cacheResponse = await fetch('/api/valkey/get-record', {
@@ -54,7 +54,7 @@ export async function getBreedInfo(breedName: string): Promise<string> {
   }
 }
 
-async function fetchBreedInfoFromGemini(breedName: string): Promise<string> {
+async function fetchBreedInfoFromGemini(breedName: string): Promise<any> {
   try {
     console.log('🤖 Calling backend API for breed info:', breedName);
     
@@ -79,7 +79,7 @@ async function fetchBreedInfoFromGemini(breedName: string): Promise<string> {
   }
 }
 
-async function cacheBreedInfo(breedName: string, breedInfo: string): Promise<void> {
+async function cacheBreedInfo(breedName: string, breedInfo: any): Promise<void> {
   try {
     const record = {
       breedName,
