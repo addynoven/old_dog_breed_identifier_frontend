@@ -8,7 +8,20 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Breed name is required' }, { status: 400 });
     }
 
-    const prompt = `Provide a short, engaging summary (about 50-70 words) for the ${breedName} dog breed. Focus on its temperament, size, and one interesting fact.`;
+    const prompt = `Provide a detailed summary for the ${breedName} dog breed in strict JSON format. 
+    The JSON object must have the following keys:
+    - "description": A short, engaging summary (about 50 words).
+    - "traits": An array of 3-5 single-word personality traits (e.g., "Loyal", "Smart").
+    - "origin": The country or region of origin.
+    - "height": Height range (e.g., "22-26 inches").
+    - "weight": Weight range (e.g., "50-90 lbs").
+    - "lifespan": Life expectancy (e.g., "10-12 years").
+    - "coatType": Short description of coat (e.g., "Double coat, medium length").
+    - "activityLevel": One of "Low", "Medium", "High".
+    - "rarity": "Common", "Rare", or "Very Rare".
+    - "goodWithKids": "Yes", "No", or "Supervision Required".
+
+    Do not include any markdown formatting (like \`\`\`json), just the raw JSON object.`;
 
     const payload = {
       contents: [{ 
@@ -33,7 +46,31 @@ export async function POST(request: NextRequest) {
     const result = await response.json();
     
     if (result.candidates && result.candidates[0]?.content?.parts[0]?.text) {
-      return NextResponse.json({ breedInfo: result.candidates[0].content.parts[0].text });
+      const text = result.candidates[0].content.parts[0].text;
+      // Clean up potential markdown code blocks if Gemini adds them despite instructions
+      const jsonString = text.replace(/```json\n?|\n?```/g, '').trim();
+      
+      try {
+        const breedInfo = JSON.parse(jsonString);
+        return NextResponse.json({ breedInfo });
+      } catch (e) {
+        console.error('Failed to parse Gemini JSON:', e);
+        // Fallback to text if parsing fails, wrapping it in a basic object structure
+        return NextResponse.json({ 
+          breedInfo: {
+            description: text,
+            traits: [],
+            origin: 'Unknown',
+            height: 'Unknown',
+            weight: 'Unknown',
+            lifespan: 'Unknown',
+            coatType: 'Unknown',
+            activityLevel: 'Unknown',
+            rarity: 'Unknown',
+            goodWithKids: 'Unknown'
+          } 
+        });
+      }
     } else {
       return NextResponse.json({ error: 'Invalid response from Gemini' }, { status: 500 });
     }

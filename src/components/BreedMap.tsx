@@ -149,22 +149,57 @@ export default function BreedMap({ breedName }: BreedMapProps) {
   };
 
   return (
-    <div className="w-full bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-white/40 transition-all duration-300 hover:shadow-indigo-500/10 animate-fade-in">
-      <div className="h-[500px] w-full relative z-0">
+    <div className="group w-full bg-white/90 backdrop-blur-xl rounded-[2rem] shadow-2xl overflow-hidden border border-white/50 transition-all duration-500 hover:shadow-indigo-500/20 hover:border-indigo-200/50 flex flex-col">
+      {/* Premium Header Section */}
+      <div className="relative p-8 border-b border-slate-100/50 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30">
+        <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+          <span className="text-8xl">🌍</span>
+        </div>
+        
+        <div className="relative z-10">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-2 bg-indigo-100/50 rounded-xl text-2xl animate-bounce-slow">
+              📍
+            </div>
+            <h3 className="text-sm font-bold text-indigo-900/60 uppercase tracking-widest">
+              Geographic Origin
+            </h3>
+          </div>
+          
+          {location ? (
+            <div className="flex flex-col">
+              <p className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-900 via-purple-800 to-indigo-900 tracking-tight">
+                {location.origin}
+              </p>
+              <p className="text-slate-500 font-medium mt-2 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Native Region
+              </p>
+            </div>
+          ) : (
+            <p className="text-2xl font-bold text-slate-300">
+              Unknown Origin
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className="h-[450px] w-full relative z-0 bg-slate-50/50">
         <MapContainer 
           center={[location.lat, location.lng]} 
           zoom={4} 
           scrollWheelZoom={true}
-          zoomControl={true}
-          className="h-full w-full bg-slate-50"
+          zoomControl={false} // We'll add a custom one or rely on scroll
+          className="h-full w-full outline-none"
         >
-          {/* Simple light basemap */}
+          {/* Elegant light basemap */}
           <TileLayer
-            url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
+            url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           />
           
           <GeoJSON 
-            key={location.origin} // Force re-render when origin changes
+            key={location.origin} 
             data={geoJsonData}
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             style={(feature: any) => {
@@ -176,18 +211,42 @@ export default function BreedMap({ breedName }: BreedMapProps) {
 
           <MapUpdater center={[location.lat, location.lng]} feature={targetFeature} />
         </MapContainer>
+        
+        {/* Decorative Overlay Gradient */}
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white/80 to-transparent pointer-events-none z-[400]"></div>
       </div>
       
-      {/* Custom CSS for the tooltip label */}
+      {/* Refined Tooltip CSS */}
       <style jsx global>{`
         .country-label {
-          background: transparent;
-          border: none;
-          box-shadow: none;
-          font-size: 16px;
-          font-weight: bold;
-          color: #312e81; /* Indigo-900 */
-          text-shadow: 0 0 4px white;
+          background: rgba(255, 255, 255, 0.98);
+          border: 1px solid rgba(99, 102, 241, 0.2);
+          border-radius: 12px;
+          padding: 8px 16px;
+          box-shadow: 
+            0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+            0 2px 4px -1px rgba(0, 0, 0, 0.06),
+            0 0 0 4px rgba(99, 102, 241, 0.05);
+          font-family: system-ui, -apple-system, sans-serif;
+          font-size: 14px;
+          font-weight: 800;
+          color: #312e81;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          backdrop-filter: blur(4px);
+          transition: all 0.3s ease;
+        }
+        .country-label:before {
+          border-top-color: rgba(255, 255, 255, 0.98);
+        }
+        .leaflet-tooltip-pane { z-index: 650; }
+        
+        @keyframes bounce-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-25%); }
+        }
+        .animate-bounce-slow {
+          animation: bounce-slow 3s infinite;
         }
       `}</style>
     </div>

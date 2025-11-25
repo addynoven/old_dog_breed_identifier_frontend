@@ -1,11 +1,48 @@
+interface BreedInfoData {
+  description: string;
+  traits: string[];
+  origin: string;
+  height: string;
+  weight: string;
+  lifespan: string;
+  coatType: string;
+  activityLevel: string;
+  rarity: string;
+  goodWithKids: string;
+}
+
 interface InfoCardProps {
   prediction: string;
-  breedInfo: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  breedInfo: any; // Can be string (old cache) or BreedInfoData (new)
   isLoading: boolean;
   isInfoLoading: boolean;
 }
 
 export default function InfoCard({ prediction, breedInfo, isLoading, isInfoLoading }: InfoCardProps) {
+  // Helper to safely get data whether it's string or object
+  const getData = (): BreedInfoData | null => {
+    if (!breedInfo) return null;
+    if (typeof breedInfo === 'string') {
+      // Fallback for old cached data
+      return {
+        description: breedInfo,
+        traits: [],
+        origin: 'Unknown',
+        height: '-',
+        weight: '-',
+        lifespan: '-',
+        coatType: '-',
+        activityLevel: '-',
+        rarity: '-',
+        goodWithKids: '-'
+      };
+    }
+    return breedInfo as BreedInfoData;
+  };
+
+  const data = getData();
+
   return (
     <div className="relative z-10 bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-8 w-full border border-white/40 transition-all duration-300 hover:shadow-indigo-500/10">
       <div className="text-center mb-8">
@@ -38,6 +75,17 @@ export default function InfoCard({ prediction, breedInfo, isLoading, isInfoLoadi
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/60 border border-indigo-100 text-indigo-600 text-sm font-medium">
               <span>✨</span> AI Confidence: High
             </div>
+            
+            {/* Traits Pills */}
+            {data && data.traits.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-2 mt-6">
+                {data.traits.map((trait, i) => (
+                  <span key={i} className="px-3 py-1 bg-white/80 border border-indigo-100 rounded-full text-sm font-semibold text-indigo-700 shadow-sm">
+                    {trait}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
           
           {isInfoLoading ? (
@@ -47,16 +95,37 @@ export default function InfoCard({ prediction, breedInfo, isLoading, isInfoLoadi
                 <span className="text-slate-600 font-medium">Fetching breed details...</span>
               </div>
             </div>
-          ) : (
-            <div className="bg-white/60 rounded-2xl p-6 border border-white/50 shadow-sm">
-              <h4 className="font-bold text-slate-800 mb-4 flex items-center gap-2 text-lg">
-                <span>📝</span> About this breed
-              </h4>
-              <p className="text-slate-700 leading-relaxed text-lg font-light">{breedInfo}</p>
+          ) : data ? (
+            <div className="space-y-6">
+              {/* Description */}
+              <div className="bg-white/60 rounded-2xl p-6 border border-white/50 shadow-sm">
+                <p className="text-slate-700 leading-relaxed text-lg font-light">{data.description}</p>
+              </div>
+
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <StatBox label="Origin" value={data.origin} />
+                <StatBox label="Height" value={data.height} />
+                <StatBox label="Weight" value={data.weight} />
+                <StatBox label="Lifespan" value={data.lifespan} />
+                <StatBox label="Coat" value={data.coatType} />
+                <StatBox label="Activity" value={data.activityLevel} />
+                <StatBox label="Rarity" value={data.rarity} />
+                <StatBox label="Kids?" value={data.goodWithKids} />
+              </div>
             </div>
-          )}
+          ) : null}
         </div>
       )}
+    </div>
+  );
+}
+
+function StatBox({ label, value }: { label: string, value: string }) {
+  return (
+    <div className="bg-white/50 p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+      <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">{label}</p>
+      <p className="font-semibold text-slate-800 text-sm leading-tight">{value}</p>
     </div>
   );
 }
