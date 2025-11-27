@@ -7,12 +7,19 @@ export default function ConfigPage() {
   const [customUrl, setCustomUrl] = useState('');
   const [message, setMessage] = useState('');
 
+  const [hasCustomUrl, setHasCustomUrl] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
     // Load current state
-    const stored = sessionStorage.getItem('custom_api_url');
+    const stored = localStorage.getItem('custom_api_url');
     if (stored) {
       setCustomUrl(stored);
       setCurrentUrl(stored);
+      setHasCustomUrl(true);
+    } else if (process.env.NEXT_PUBLIC_API_URL) {
+      setCurrentUrl(process.env.NEXT_PUBLIC_API_URL);
     }
   }, []);
 
@@ -32,8 +39,9 @@ export default function ConfigPage() {
     // Remove trailing slash if present
     const sanitizedUrl = customUrl.endsWith('/') ? customUrl.slice(0, -1) : customUrl;
 
-    sessionStorage.setItem('custom_api_url', sanitizedUrl);
+    localStorage.setItem('custom_api_url', sanitizedUrl);
     setCurrentUrl(sanitizedUrl);
+    setHasCustomUrl(true);
     setMessage('✅ Custom URL saved! You can now use the app.');
     
     // Redirect to home after saving
@@ -41,6 +49,10 @@ export default function ConfigPage() {
       window.location.href = '/';
     }, 1000);
   };
+
+  if (!mounted) {
+    return null; // Prevent hydration mismatch
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8 flex flex-col items-center justify-center">
@@ -50,6 +62,9 @@ export default function ConfigPage() {
         <div className="mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700">
           <p className="text-sm text-gray-400 mb-1">Current Active API URL:</p>
           <code className="text-green-400 break-all">{currentUrl || 'Not Configured'}</code>
+          {process.env.NEXT_PUBLIC_API_URL && !hasCustomUrl && (
+            <p className="text-xs text-gray-500 mt-2">(Using default from .env.local)</p>
+          )}
         </div>
 
         <div className="mb-6 p-4 bg-blue-900/30 rounded-lg border border-blue-700/50">
@@ -99,8 +114,8 @@ export default function ConfigPage() {
         </div>
 
         <div className="mt-8 text-xs text-gray-500 text-center">
-          <p>This setting is stored in <code>sessionStorage</code>.</p>
-          <p>It will be cleared when you close the browser tab.</p>
+          <p>This setting is stored in <code>localStorage</code>.</p>
+          <p>It will persist even if you close the browser.</p>
         </div>
       </div>
     </div>

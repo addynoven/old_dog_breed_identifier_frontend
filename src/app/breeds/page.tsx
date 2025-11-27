@@ -194,7 +194,7 @@ export default function Breeds() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 animate-fade-in-up animation-delay-400">
             {filteredBreeds.map((breed) => (
               <Link 
-                href={`/?breed=${encodeURIComponent(breed.name)}`}
+                href={`/dashboard?breed=${encodeURIComponent(breed.name)}`}
                 key={breed.id}
                 className="group bg-white dark:bg-slate-800 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 overflow-hidden border border-slate-100 dark:border-slate-700 hover:border-indigo-200 dark:hover:border-indigo-500/50 hover:-translate-y-1 flex flex-col"
               >

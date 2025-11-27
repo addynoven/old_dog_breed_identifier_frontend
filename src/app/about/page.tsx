@@ -1,6 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -10,6 +11,15 @@ export default function About() {
         <div className="max-w-5xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16 animate-fade-in-up">
+            <div className="flex justify-center mb-6">
+              <Image 
+                src="/logo.png" 
+                alt="DogID Logo" 
+                width={120} 
+                height={120} 
+                className="w-32 h-32 object-contain drop-shadow-2xl"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">DogID.ai</span>
             </h1>

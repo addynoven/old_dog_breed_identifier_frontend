@@ -2,6 +2,7 @@ import { useState } from 'react';
 import UploadCard from './UploadCard';
 import InfoCard from './InfoCard';
 import BreedSearchBar from './BreedSearchBar';
+import SimilarBreeds from './SimilarBreeds';
 import dynamic from 'next/dynamic';
 
 const BreedMap = dynamic(() => import('./BreedMap'), {
@@ -115,8 +116,14 @@ export default function MainContent({
 
           {/* Full Width Map Section */}
           {(prediction || selectedBreedImage) && !isLoading && (
-            <div className="w-full">
-              <BreedMap breedName={prediction} />
+            <div className="w-full space-y-8">
+              <div className="w-full">
+                <BreedMap breedName={prediction} />
+              </div>
+              <SimilarBreeds 
+                currentBreed={prediction} 
+                onSelectBreed={handleSearch} 
+              />
             </div>
           )}
         </div>

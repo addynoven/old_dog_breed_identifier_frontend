@@ -26,6 +26,29 @@ export function getBreedNameFromLabel(labelNumber: number): string | null {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function getBreedInfo(breedName: string): Promise<any> {
   try {
+    // 0. Check local JSON file (Fastest)
+    // Fetch the JSON file from the public directory
+    try {
+      const response = await fetch('/breed-data.json');
+      if (response.ok) {
+        const breedData = await response.json();
+        const localEntry = Object.entries(breedData).find(([key]) => {
+          const parts = key.split('-');
+          if (parts.length < 2) return false;
+          const nameFromKey = parts.slice(1).join('-').replace(/_/g, ' ');
+          return nameFromKey.toLowerCase() === breedName.toLowerCase();
+        });
+
+        if (localEntry) {
+          console.log('⚡ Using local breed data for:', breedName);
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          return localEntry[1] as any;
+        }
+      }
+    } catch (e) {
+      console.warn('Failed to fetch local breed data, falling back to cache/API', e);
+    }
+
     // First check if breed info is cached
     const cacheResponse = await fetch('/api/valkey/get-record', {
       method: 'POST',

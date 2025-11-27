@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,13 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4 group w-fit">
-              <span className="text-3xl group-hover:scale-110 transition-transform duration-300">🐕</span>
+              <Image 
+                src="/logo.png" 
+                alt="DogID Logo" 
+                width={40} 
+                height={40} 
+                className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+              />
               <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight">
                 DogID<span className="text-indigo-600 dark:text-indigo-400">.ai</span>
               </h2>
