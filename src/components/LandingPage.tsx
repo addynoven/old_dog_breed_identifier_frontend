@@ -26,7 +26,7 @@ export default function LandingPage() {
                 height={40} 
                 className="w-10 h-10 object-contain"
               />
-              <span>DogID<span className="text-indigo-400">.ai</span></span>
+              <span>Dog <span className="text-indigo-400">Lab</span></span>
             </div>
             
             <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
@@ -233,7 +233,7 @@ export default function LandingPage() {
               },
               {
                 icon: FaGamepad,
-                title: "DogID Arcade",
+                title: "Dog Lab Arcade",
                 desc: "Test your knowledge with our 'Who is this dog breed?' quiz game.",
                 gradient: "from-orange-500 to-yellow-500"
               },
@@ -281,7 +281,7 @@ export default function LandingPage() {
         {/* Footer */}
         <footer className="container mx-auto px-6 py-12 border-t border-slate-800">
           <div className="text-center text-slate-500 text-sm">
-            <p>© 2025 DogID.ai • Powered by Advanced Machine Learning</p>
+            <p>© 2025 Dog Lab • Powered by Advanced Machine Learning</p>
           </div>
         </footer>
       </div>

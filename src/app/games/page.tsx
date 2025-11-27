@@ -10,7 +10,7 @@ export default function GamesPage() {
       <main className="flex-1 container mx-auto px-4 py-6 mt-16">
         <div className="text-center mb-6 animate-fade-in-up">
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
-            DogID <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Arcade</span>
+            Dog Lab <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Arcade</span>
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-light">
             Test your knowledge and challenge yourself with our breed identification games.

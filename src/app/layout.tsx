@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dog Breed Identifier",
+  title: "Dog Lab",
   description: "AI-powered dog breed identification using machine learning",
   icons: {
     icon: '/favicon.ico',

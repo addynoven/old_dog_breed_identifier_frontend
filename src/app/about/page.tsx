@@ -21,7 +21,7 @@ export default function About() {
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">DogID.ai</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Dog Lab</span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-light leading-relaxed mb-8">
               A state-of-the-art dog breed identifier powered by advanced machine learning and modern web technologies.
@@ -48,7 +48,7 @@ export default function About() {
               </h2>
               <div className="bg-white dark:bg-slate-900/50 rounded-3xl p-8 shadow-sm border border-slate-100 dark:border-slate-800">
                 <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg mb-6">
-                  DogID.ai is a comprehensive web application designed to help users identify over 120 different dog breeds from images. 
+                  Dog Lab is a comprehensive web application designed to help users identify over 120 different dog breeds from images. 
                   Whether you upload a photo or use your camera, our system provides instant predictions, detailed breed information, 
                   and interactive maps showing the breed&apos;s origin.
                 </p>

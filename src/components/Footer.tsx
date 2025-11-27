@@ -19,7 +19,7 @@ export default function Footer() {
                 className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
               />
               <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight">
-                DogID<span className="text-indigo-600 dark:text-indigo-400">.ai</span>
+                Dog <span className="text-indigo-600 dark:text-indigo-400">Lab</span>
               </h2>
             </Link>
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm">

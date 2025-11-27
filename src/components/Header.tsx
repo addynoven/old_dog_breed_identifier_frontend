@@ -43,7 +43,7 @@ export default function Header({ onToggleSidebar }: HeaderProps) {
               className="w-8 h-8 object-contain"
             />
             <h1 className="text-lg font-bold text-slate-800 dark:text-slate-100 tracking-tight">
-              DogID<span className="text-indigo-600 dark:text-indigo-400">.ai</span>
+              Dog <span className="text-indigo-600 dark:text-indigo-400">Lab</span>
             </h1>
           </Link>
         </div>
