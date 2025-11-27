@@ -18,29 +18,29 @@ export default function Header({ onToggleSidebar }: HeaderProps) {
   const { data: session } = useSession();
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 py-6 px-4">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          {/* Sidebar Toggle (Desktop) */}
+    <header className="absolute top-0 left-0 right-0 z-50 py-4 px-4">
+      <div className="w-full flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          {/* Sidebar Toggle */}
           {onToggleSidebar && (
             <button
               onClick={onToggleSidebar}
-              className="hidden md:flex items-center justify-center w-10 h-10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md rounded-xl border border-white/20 dark:border-slate-700/30 shadow-sm hover:bg-white/80 dark:hover:bg-slate-800 transition-all text-slate-700 dark:text-slate-300"
-              title="Toggle History"
+              className="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+              title="Toggle Sidebar"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           )}
 
-          <Link href="/" className="flex items-center gap-3 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 dark:border-slate-700/30 shadow-sm hover:bg-white/60 dark:hover:bg-slate-900/60 transition-all">
+          <Link href="/" className="flex items-center gap-2 px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
             <Image 
               src="/logo.png" 
-              alt="DogID Logo" 
-              width={32} 
-              height={32} 
-              className="w-8 h-8 object-contain"
+              alt="Dog Lab Logo" 
+              width={28} 
+              height={28} 
+              className="w-7 h-7 object-contain"
             />
             <h1 className="text-lg font-bold text-slate-800 dark:text-slate-100 tracking-tight">
               Dog <span className="text-indigo-600 dark:text-indigo-400">Lab</span>

@@ -58,7 +58,7 @@ export default function HistorySidebar({ isOpen, onClose, onSelect }: HistorySid
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 bottom-0 md:top-24 left-0 z-40 w-80 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 flex flex-col border-r border-slate-200 dark:border-slate-800/50 shadow-2xl"
+            className="fixed top-0 bottom-0 md:top-20 left-0 z-40 w-80 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 flex flex-col border-r border-slate-200 dark:border-slate-800 shadow-2xl"
           >
             {/* Header */}
             <div className="p-4 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
